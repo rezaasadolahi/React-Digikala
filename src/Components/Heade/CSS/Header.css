@@ -1,0 +1,330 @@
+header {
+  width: 100%;
+  height: 80px;
+}
+
+header nav {
+  width: inherit;
+  height: inherit;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 3;
+  border: none;
+  outline: none;
+}
+
+.Head-search[type="text"] {
+  width: 664px;
+  height: 44px;
+  border: none;
+  outline: none;
+  background-color: #f0f0f1;
+  border-radius: 8px;
+  position: fixed;
+  top: 18px;
+  right: 150px;
+  direction: rtl;
+  text-indent: 48px;
+  transition: all 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.Head-search[type="text"]:focus {
+  box-shadow: 0 0 3px 1px rgba(128, 128, 128, 0.836);
+}
+
+.search_icon {
+  position: absolute;
+  top: 30px;
+  right: 158px;
+  z-index: 3;
+  transform: scale(1.3);
+}
+
+/* Sign up Head*/
+
+.sign-and-cart {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  top: 18px;
+}
+
+.sign-up {
+  width: max-content;
+  height: max-content;
+  border: 1px solid gray;
+  line-height: 1.833;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  color: #616161;
+}
+
+.sign-up:hover {
+  color: #616161;
+}
+
+.sign-up span {
+  padding-right: 8px;
+  font-size: 14px;
+}
+
+.sign-up .user-icon {
+  font-size: 25px !important;
+}
+
+.user-icon2 {
+  font-size: 25px !important;
+  color: rgb(0, 0, 0) !important;
+  position: relative;
+  top: 3px;
+}
+
+.Vertical {
+  position: relative;
+  top: 11px;
+  font-size: 2.1rem;
+  padding-right: 13px;
+  padding-left: 12px;
+  color: #e0e0e2;
+  font-weight: lighter;
+  cursor: default;
+}
+
+.cart {
+  font-size: 25px !important;
+  transform: scaleX(-1);
+  margin-left: 19px;
+  position: relative;
+  top: 9.5px;
+  cursor: pointer;
+}
+
+/* Logo */
+#logo {
+  position: absolute;
+  top: 1.9em;
+  right: 2em;
+}
+
+
+
+/*===== When login in website =====*/
+
+.boxlogin {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 7px 12px 7px;
+  border-radius: 3px;
+  margin-top: 4px;
+  transition: all 0.2s ease;
+  z-index: 0;
+}
+
+.boxlogin:focus {
+  border: none;
+  outline: none;
+  background-color: rgba(166, 248, 134, 0.397);
+}
+
+.boxlogin:focus .miniPageAccount {
+  display: block;
+}
+
+.miniPageAccount {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 5.7rem;
+  box-shadow: 0 3px 8px 0 rgb(0 0 0 / 30%);
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+  height: 269px;
+  overflow: hidden;
+}
+
+.miniPageAccount > section {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: end;
+}
+
+.miniPageAccount > section:hover {
+  background-color: #f0f0f1;
+}
+
+.miniPageAccount > section .valet {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 12.2em;
+  right: 49px;
+}
+
+.miniPageAccount > section .valet p:first-child {
+  padding-left: 26px;
+  position: relative;
+  left: 0;
+}
+
+.miniPageAccount > section .valet p:last-child {
+  padding-left: 26px;
+  position: relative;
+  left: -9px;
+}
+
+.miniPageAccount > section .icon-profile {
+  font-size: 33px;
+  margin: 12px;
+  transform: scale(0.3);
+  position: relative;
+  left: 41px;
+  bottom: 41px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.miniPageAccount > section .Vertical {
+  position: absolute;
+  right: 17px;
+  top: 43px;
+  transform: rotate(90deg);
+}
+
+.miniPageAccount > section .circle {
+  position: absolute;
+  right: 17.6px;
+  top: 60px;
+  font-size: 25px;
+}
+
+.miniPageAccount > section article h5:first-child {
+  font-size: 1rem;
+  position: relative;
+  left: 107px;
+  top: 8px;
+}
+
+.miniPageAccount > section article #seeAccount {
+  position: relative;
+  left: 89px;
+  bottom: 1px;
+  color: rgb(0, 183, 255);
+  margin-bottom: 14px;
+  width: max-content;
+}
+
+.miniPageAccount > section article #seeAccount .icon-arrowleft {
+  right: 106px;
+  bottom: 2px;
+  position: absolute;
+}
+
+#line-beine-box1 {
+  position: relative;
+  left: 9px;
+  bottom: 14px;
+}
+
+.miniPageAccount .box-2 {
+  position: absolute;
+  top: 101px;
+  /* background-color: chartreuse; */
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.miniPageAccount .box-2 .icon-arrowleft {
+  color: #000000;
+  margin-right: 5px;
+  font-size: 22px;
+}
+
+.miniPageAccount .box-2 .text {
+  margin-top: 14px;
+}
+
+.miniPageAccount .box-2 .circle {
+  width: 8px;
+  height: 8px;
+  background-color: #ef394e;
+  border-radius: 50%;
+  position: absolute;
+  top: 39%;
+  left: 89.5%;
+  animation: circle alternate-reverse infinite ease-in;
+  animation-duration: 1.2s;
+}
+@keyframes circle {
+  100% {
+    box-shadow: 0 0 0 7px #fd788742;
+  }
+}
+
+#line-beine-box2 {
+  position: relative;
+  left: 9px;
+  top: 13px;
+}
+
+.miniPageAccount .box-3 {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#line-beine-box3 {
+  position: relative;
+  left: 9px;
+  top: 41px;
+}
+
+.miniPageAccount .box-4 {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 27.9px;
+}
+
+#line-beine-box4 {
+  position: relative;
+  left: 9px;
+  top: 69px;
+}
+
+.miniPageAccount .box-5 {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+}

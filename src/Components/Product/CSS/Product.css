@@ -1,0 +1,181 @@
+*,
+div,
+section,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+main {
+  width: 100%;
+  z-index: 1;
+}
+
+main h1 {
+  text-align: center;
+  position: relative;
+  top: 50px;
+}
+
+/*********************************************************************************/
+
+.under-main {
+  width: 1200px;
+  height: 200vh;
+  height: max-content;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 0 0 16px;
+  direction: rtl;
+}
+
+.content {
+  width: 300px;
+  height: 432px;
+  background-color: rgb(255, 255, 255);
+  border: 0.8px solid rgba(128, 128, 128, 0.575);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease-in;
+}
+
+.content:hover {
+  box-shadow: 0 0 19px 6px rgba(0, 0, 0, 0.09);
+  transform: scale(1.01);
+  z-index: 1;
+}
+
+.imgage {
+  width: 100%;
+  height: 191px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  position: absolute;
+}
+
+.title {
+  position: absolute;
+  top: 17em;
+  width: 100%;
+  text-align: center;
+}
+.title p {
+  font-size: 25px;
+  user-select: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.price {
+  position: absolute;
+  top: 21em;
+  width: 100%;
+  text-align: center;
+  transform: scale(0.8);
+}
+
+.card-product-a {
+  color: #000000;
+}
+.card-product-a:hover {
+  color: #000000;
+}
+
+/***************************************-> Header Product <-***************************************/
+
+#TedadKala {
+  position: relative;
+  top: 2.3rem;
+  right: 83rem;
+  user-select: none;
+}
+
+.header-product {
+  width: 1200px;
+  height: 50px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  z-index: 2;
+  border-bottom: 0.6px solid rgba(128, 128, 128, 0.575);
+  user-select: none;
+}
+
+.header-product .buttons-Fliter {
+  margin-right: 14px;
+}
+
+.header-product .buttons-Fliter label {
+  border: none !important;
+  outline: none !important;
+  width: auto;
+  height: auto;
+  line-height: auto;
+  margin-left: 18px;
+  border-radius: 5px;
+  font-size: 11.5px;
+  transform: scale(1.1);
+  font-weight: bold;
+  padding: 6px 7px;
+  text-align: center;
+  cursor: pointer;
+  color: #4a5f73;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.header-product .buttons-Fliter label:hover {
+  background-color: #ece9e9;
+}
+
+.header-product .buttons-Fliter label:focus {
+  background-color: #00bfd6;
+  color: #ffffff;
+}
+
+.buttons-Fliter input[type="radio"] {
+  display: none;
+}
+
+.buttons-Fliter input[type="radio"]:checked + label {
+  background-color: #00bfd6;
+  color: #ffffff;
+}
+
+.header-product .manageBoxMoratabSazi {
+  width: max-content;
+  height: auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-product #icon-filterLeft {
+  font-size: large;
+  font-size: 25px;
+  color: #cecece;
+  margin-right: 7px;
+}
+
+.header-product .manageBoxMoratabSazi span {
+  margin-right: 9px;
+  margin-top: 4px;
+  user-select: none;
+}
