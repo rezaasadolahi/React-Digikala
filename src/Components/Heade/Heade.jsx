@@ -26,16 +26,18 @@ import Profile from './Images/profile.svg'
 
 function Heade() {
     const dispatch = useDispatch()
-    const [searchBox, setSearchBox] = useState('')
+    const valPishnahad = useSelector(state => state.Main_search.searche)
 
+    const [searchBox, setSearchBox] = useState('')
 
     const handleChanle = (e) => {
         setSearchBox(e.target.value)
         setStatusFindProduct(!statusFindProduct)
+        dispatch(Search(e.target.innerText))
     }
 
-    const handleSubmit = (Event) => {
-        Event.preventDefault()
+    const handleSubmit = (e) => {
+        e.preventDefault()
         dispatch(Search(searchBox))
         setStatusFindProduct(!statusFindProduct)
     }
@@ -59,7 +61,6 @@ function Heade() {
         setStatusFindProduct(!statusFindProduct)
     }
 
-
     const handleLogoClick = () => {
         setSearchBox('')
         dispatch(Search(''))
@@ -75,8 +76,8 @@ function Heade() {
         dispatch(Emailuser(''))
         dispatch(PasswordUser(''))
     }
-    
-    
+
+
 
 
 
@@ -94,7 +95,7 @@ function Heade() {
                         className='Head-search'
                         placeholder='جستجو در دیجی کالا'
                         onChange={handleChanle}
-                        value={searchBox}
+                        value={valPishnahad || searchBox}
                     />
                 </form>
 

@@ -2,7 +2,7 @@ import { ActionType } from '../Action Type/ActionType'
 
 
 
-
+// use into header
 const StateValSearchBoxHead = {
     searche: ''
 }
@@ -23,7 +23,6 @@ export const Searchee = (state = StateValSearchBoxHead, action) => {
 
 
 // Sign In / Up
-
 const getEmail = {
     EmailUser: ''
 }

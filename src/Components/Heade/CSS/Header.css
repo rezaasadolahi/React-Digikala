@@ -161,7 +161,7 @@ header nav {
   width: 200px;
   height: 100px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .miniPageAccount > section:hover {

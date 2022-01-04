@@ -23,15 +23,20 @@ main h1 {
   top: 50px;
 }
 
+.manage-Tags_product {
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+  display: flex;
+}
+
 /*********************************************************************************/
 
 .under-main {
   width: 1200px;
-  height: 200vh;
   height: max-content;
   background-color: #f5f5f5;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   margin: 0 0 0 16px;
   direction: rtl;
@@ -109,7 +114,7 @@ main h1 {
   margin: 20px 0 0 0;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   z-index: 2;
   border-bottom: 0.6px solid rgba(128, 128, 128, 0.575);
@@ -179,3 +184,114 @@ main h1 {
   margin-top: 4px;
   user-select: none;
 }
+
+/* Aside */
+
+aside {
+  width: 80%;
+  height: max-content;
+  background-color: #ffffff;
+  position: relative;
+  top: 53.5px;
+  padding: 2px;
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+}
+
+aside #FilterBetween2price > div {
+  width: 100%;
+  height: max-content;
+  background-color: rgb(141, 240, 202);
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 8px;
+}
+
+aside #FilterBetween2price #title-between-twoPrice {
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  direction: rtl;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+
+aside #FilterBetween2price > div section {
+  width: 100%;
+  height: max-content;
+  background-color: rgb(251, 255, 253);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+aside #FilterBetween2price > div section span {
+  width: 15px;
+  height: 31px;
+  line-height: 31px;
+  display: block;
+  position: absolute;
+  font-size: 21px;
+  margin-right: 5px;
+  transform: translate(2px, -6px);
+  user-select: none !important;
+  border-radius: 2px;
+}
+
+aside #FilterBetween2price button {
+  font-size: 17px !important;
+  line-height: 25px;
+}
+
+
+/* List pishnahad search mahsul */
+
+.pishnahadSearch {
+  width: 100%;
+  height: max-content;
+  border: orange;
+  direction: rtl;
+  text-align: start;
+  margin-top: 15px;
+  user-select: none;
+}
+
+.pishnahadSearch .head > section {
+  font-size: 18px;
+  margin-right: 20px;
+  color: #424750;
+}
+
+.pishnahadSearch .list {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.pishnahadSearch .list section {
+  width: 100%;
+  cursor: pointer;
+  line-height: 33px;
+  direction: rtl;
+  text-align: start;
+  text-indent: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pishnahadSearch .list section p {
+  transform: translateX(5px);
+}
+
+.pishnahadSearch .list section .icon-leftArrow {
+  margin-left: 10px;
+  font-size: 20px;
+  fill: #a1a3a8;
+  color: #a1a3a8;
+}
+
+
+
+
+
+
