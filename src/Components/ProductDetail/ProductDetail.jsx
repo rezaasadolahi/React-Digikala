@@ -112,14 +112,18 @@ function ProductDetail() {
                                 </section>
                                 <section id='box-color'>
                                     {
-                                        objectProduct.color.map(item =>
-                                            <span
-                                                tabIndex={1}
-                                                aria-label={item.name}
-                                                style={{ backgroundColor: item.color }}
-                                                onClick={() => setcolorNamePersian(item.name)}
-                                            >
-                                            </span>
+                                        objectProduct.color.map((item, index) =>
+                                            <>
+                                                <input type="radio" id={index} name='color' defaultChecked={true} />
+                                                <label
+                                                    htmlFor={index}
+                                                    tabIndex={1}
+                                                    aria-label={item.name}
+                                                    style={{ backgroundColor: item.color }}
+                                                    onClick={() => setcolorNamePersian(item.name)}
+                                                >
+                                                </label>
+                                            </>
                                         )
                                     }
                                 </section>

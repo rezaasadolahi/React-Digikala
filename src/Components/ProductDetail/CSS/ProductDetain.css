@@ -385,24 +385,40 @@ p:nth-child(6):hover::after {
   height: 32px;
   background-color: rgb(255, 255, 255);
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
+  justify-content: start;
 }
 
-.box-left-bottom .box1 .color-product #box-color span {
+.box-left-bottom .box1 .color-product #box-color input[type="radio"] {
+  display: none;
+}
+
+.box-left-bottom
+  .box1
+  .color-product
+  #box-color
+  input[type="radio"]:checked
+  + label {
+  outline: 3px solid #00e1ffd2;
+}
+
+.box-left-bottom .box1 .color-product #box-color label {
   width: 27px;
   height: 27px;
   border-radius: 50%;
   margin-right: 19px;
   margin-top: 7px;
   cursor: pointer;
+  outline: 1px solid #6f6f6f70;
+  border: 3px solid #ffffff;
 }
 
-.box-left-bottom .box1 .color-product #box-color span:focus {
-  border: 3px solid #ffffff;
+.box-left-bottom .box1 .color-product #box-color label:focus {
   outline: 3px solid #00e1ffd2;
 }
 
-.box-left-bottom .box1 .color-product #box-color span::before {
+.box-left-bottom .box1 .color-product #box-color label::before {
   content: attr(aria-label);
   position: absolute;
   width: max-content;
@@ -419,7 +435,7 @@ p:nth-child(6):hover::after {
   display: none;
 }
 
-.box-left-bottom .box1 .color-product #box-color span::after {
+.box-left-bottom .box1 .color-product #box-color label::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -431,8 +447,8 @@ p:nth-child(6):hover::after {
   display: none;
 }
 
-.box-left-bottom .box1 .color-product #box-color span:hover::before,
-.box-left-bottom .box1 .color-product #box-color span:hover::after {
+.box-left-bottom .box1 .color-product #box-color label:hover::before,
+.box-left-bottom .box1 .color-product #box-color label:hover::after {
   display: block;
 }
 
@@ -449,11 +465,6 @@ p:nth-child(6):hover::after {
   font-weight: bold;
   padding-top: 18px;
 }
-
-
-
-
-
 
 .productDetail-top .box-left .box-left-bottom .box2 {
   width: 50%;
