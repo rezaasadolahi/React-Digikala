@@ -107,7 +107,7 @@ function ProductDetail() {
                                 <section className='mx-1'>
                                     <span>رنگ :</span>
                                     <span className='mx-3'>
-                                        {colorNamePersian == '' ? setcolorNamePersian('مشکی') : colorNamePersian}
+                                        {colorNamePersian === '' ? setcolorNamePersian('مشکی') : colorNamePersian}
                                     </span>
                                 </section>
                                 <section id='box-color'>
