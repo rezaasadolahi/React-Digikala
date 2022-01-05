@@ -528,6 +528,7 @@ const Data = [
     MoshakhasatKamel: 'گوشی موبایل سامسونگ مدل A52s 5G SM-A528B/DS دو سیم‌کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت',
     MoshaKhasat_EN: 'Samsung Galaxy A52s 5G SM-A528B/DS Dual SIM 256GB And 8GB Ram Mobile Phone',
     Ratestar: '4,2',
+    color: [{ name: 'آبی', color: 'blue' }, { name: 'زرد', color: 'yellow' }, { name: 'مشکی', color: 'black' }]
   },
   {
     phoneName: [

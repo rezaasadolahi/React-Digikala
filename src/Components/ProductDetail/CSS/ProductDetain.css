@@ -293,11 +293,6 @@ p:nth-child(6):hover::after {
   transform: translate(-11.5%, -11%);
 }
 
-
-
-
-
-
 .productDetail-top .box-left {
   width: 71.9%;
   height: 83.3%;
@@ -339,7 +334,7 @@ p:nth-child(6):hover::after {
   width: 200px;
   height: 2fr;
   color: rgb(36, 34, 34) !important;
-  transform: translate(-7px,-4px);
+  transform: translate(-7px, -4px);
 }
 
 .productDetail-top .box-left .box-left-bottom {
@@ -353,24 +348,106 @@ p:nth-child(6):hover::after {
   background-color: aquamarine;
 }
 
-.productDetail-top .box-left .box-left-bottom .box1{
+.productDetail-top .box-left .box-left-bottom .box1 {
   width: 100%;
   height: 376px;
   background-color: blue;
+  padding-right: 25px;
 }
 
 .productDetail-top .box-left .box-left-bottom .box1 .amareMahsul {
   width: auto;
   height: auto;
-  background-color: rgb(238, 113, 113);
+  background-color: rgb(255, 255, 255);
   display: flex;
   direction: rtl;
   text-align: start;
-  margin-right: 25px;
 }
 .productDetail-top .box-left .box-left-bottom .box1 .amareMahsul #icon-star {
-  color: rgb(255, 255, 0);
+  color: rgb(255, 217, 0);
   margin-left: 5px;
+  transform: translateY(2px);
+}
+
+.box-left-bottom .box1 .color-product {
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  margin-right: 25px;
+  text-align: start;
+  direction: rtl;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.box-left-bottom .box1 .color-product #box-color {
+  width: 100%;
+  height: 32px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+}
+
+.box-left-bottom .box1 .color-product #box-color span {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  margin-right: 19px;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.box-left-bottom .box1 .color-product #box-color span:focus {
+  border: 3px solid #ffffff;
+  outline: 3px solid #00e1ffd2;
+}
+
+.box-left-bottom .box1 .color-product #box-color span::before {
+  content: attr(aria-label);
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  padding: 8px;
+  background-color: #6f6f6f;
+  color: #ffffff;
+  border-radius: 5px;
+  top: 122px;
+  margin-right: 15px;
+  box-sizing: border-box;
+  transform: translateX(18px);
+  font-size: 15px;
+  display: none;
+}
+
+.box-left-bottom .box1 .color-product #box-color span::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #6f6f6f;
+  transform: rotate(43deg);
+  top: 117px;
+  margin-right: 8px;
+  display: none;
+}
+
+.box-left-bottom .box1 .color-product #box-color span:hover::before,
+.box-left-bottom .box1 .color-product #box-color span:hover::after {
+  display: block;
+}
+
+.box-left-bottom .box1 #vizhegiKala {
+  width: 100%;
+  height: 200px;
+  background-color: aqua;
+  text-align: start;
+  direction: rtl;
+}
+
+.box-left-bottom .box1 #vizhegiKala > p {
+  font-size: 17px;
+  font-weight: bold;
+  padding-top: 18px;
 }
 
 
@@ -378,16 +455,8 @@ p:nth-child(6):hover::after {
 
 
 
-
-
-
-
-
-.productDetail-top .box-left .box-left-bottom .box2{
+.productDetail-top .box-left .box-left-bottom .box2 {
   width: 50%;
   height: 376px;
   background-color: chartreuse;
 }
-
-
-

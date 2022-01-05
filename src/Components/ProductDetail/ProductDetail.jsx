@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { AiOutlineHeart } from "react-icons/ai"
 import { BsShareFill, BsListUl, BsSquareHalf, BsStarFill } from "react-icons/bs"
@@ -20,6 +20,11 @@ function ProductDetail() {
 
     let objectProduct = dataCenter.getProductById(id)
     console.log(objectProduct)
+
+    // vaqti ruye rang haye kala click mikonim esmesho minevise
+    const [colorNamePersian, setcolorNamePersian] = useState('')
+
+
 
 
 
@@ -89,14 +94,43 @@ function ProductDetail() {
                     </div>
 
                     <section className='box-left-bottom'>
-                        <section className='box1'>
+                        <div className='box1'>
                             <section className='amareMahsul'>
-                                <BsStarFill id='icon-star'/>
+                                <BsStarFill id='icon-star' />
                                 <span>{objectProduct.Ratestar}</span>
+                                <span className='mx-2'>|</span>
+                                <span className='text-primary mx-1' style={{ cursor: 'pointer' }}>359 نظر</span>
+                                <span className='mx-2'>|</span>
+                                <span className='text-primary mx-1' style={{ cursor: 'pointer' }}>70 پرسش و پاسخ</span>
                             </section>
+                            <div className='color-product pt-5'>
+                                <section className='mx-1'>
+                                    <span>رنگ :</span>
+                                    <span className='mx-3'>
+                                        {colorNamePersian == '' ? setcolorNamePersian('مشکی') : colorNamePersian}
+                                    </span>
+                                </section>
+                                <section id='box-color'>
+                                    {
+                                        objectProduct.color.map(item =>
+                                            <span
+                                                tabIndex={1}
+                                                aria-label={item.name}
+                                                style={{ backgroundColor: item.color }}
+                                                onClick={() => setcolorNamePersian(item.name)}
+                                            >
+                                            </span>
+                                        )
+                                    }
+                                </section>
+                            </div>
+                            <section id='vizhegiKala'>
+                                <p className='mx-1'>ویژگی کالاها</p>
+                                <section>
 
-
-                        </section>
+                                </section>
+                            </section>
+                        </div>
 
                         <section className='box2'></section>
                     </section>

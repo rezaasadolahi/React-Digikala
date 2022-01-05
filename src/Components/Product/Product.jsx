@@ -203,6 +203,7 @@ function Product() {
                             </button>
                         </div>
 
+                        <hr width="280" className='mx-auto mt-4 mb-4'/>
 
                         <section className='pishnahadSearch'>
                             <section className='head'>
@@ -228,6 +229,8 @@ function Product() {
                                 </section>
                             </section>
                         </section>
+
+                        <hr width="280" className='mx-auto mt-4 mb-4'/>
                     </aside>
                 </section>
 

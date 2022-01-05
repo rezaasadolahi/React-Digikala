@@ -51,6 +51,7 @@ main h1 {
   overflow: hidden;
   position: relative;
   transition: all 0.2s ease-in;
+  direction: rtl;
 }
 
 .content:hover {
@@ -254,10 +255,12 @@ aside #FilterBetween2price button {
   margin-top: 15px;
   user-select: none;
 }
+.pishnahadSearch .head {
+  transform: translateX(-10px);
+}
 
 .pishnahadSearch .head > section {
   font-size: 18px;
-  margin-right: 20px;
   color: #424750;
 }
 
