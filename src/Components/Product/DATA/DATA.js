@@ -1,3 +1,5 @@
+//* Salars logo
+import DigikalaSalar from '../Image DATA/Forushande ha/digikala.png'
 import PS1 from '../Image DATA/Phone/Samsung/PS1.jpg'
 import PS2 from '../Image DATA/Phone/Samsung/PS2.jpg'
 import PS3 from '../Image DATA/Phone/Samsung/PS3.jpg'
@@ -528,7 +530,23 @@ const Data = [
     MoshakhasatKamel: 'گوشی موبایل سامسونگ مدل A52s 5G SM-A528B/DS دو سیم‌کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت',
     MoshaKhasat_EN: 'Samsung Galaxy A52s 5G SM-A528B/DS Dual SIM 256GB And 8GB Ram Mobile Phone',
     Ratestar: '4,2',
-    color: [{ name: 'آبی', color: 'blue' }, { name: 'زرد', color: 'yellow' }, { name: 'مشکی', color: 'black' }]
+    color: [{ name: 'آبی', color: 'blue' }, { name: 'زرد', color: 'yellow' }, { name: 'مشکی', color: 'black' }],
+    Product_characteristics: 'ویژگی کالاها',
+    title_internal_memory: 'حافظه داخلی :',
+    internal_memory: '256 گیگابایت',
+    title_Screen_size: 'اندازه صفحه نمایش :',
+    Screen_size: '6.0 اینچ و بزرگتر',
+    title_communication_networks: 'شبکه های ارتباطی :',
+    communication_networks: '5G، 4G، 3G، 2G',
+    Samane_Hamta:`شدار سامانه همتا: در صورت انجام معامله، از فروشنده کد فعالسازی را گرفته و حتما در حضور ایشان، دستگاه را از طریق #7777*، برای سیمکارت خود فعالسازی نمایید. آموزش تصویری در آدرس اینترنتی hmti.ir/06
+    امکان برگشت کالا در گروه موبایل با دلیل "انصراف از خرید" تنها در صورتی مورد قبول است که پلمپ کالا باز نشده باشد`,
+    title_Seller: 'فروشنده',
+    Salar_pic: DigikalaSalar,
+    Seller_name: 'دیجی کالا',
+    title_rezayat_kharidaran:'رضایت خریداران',
+    rezayat_kharidaran:'94 %',
+    title_AmalKard:'عملکرد',
+    AmalKard:'عالی',
   },
   {
     phoneName: [

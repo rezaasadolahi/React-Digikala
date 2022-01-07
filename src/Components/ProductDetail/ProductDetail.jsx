@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
+//* Icon
 import { AiOutlineHeart } from "react-icons/ai"
-import { BsShareFill, BsListUl, BsSquareHalf, BsStarFill } from "react-icons/bs"
+import { BsShareFill, BsListUl, BsSquareHalf, BsStarFill, BsFillCircleFill } from "react-icons/bs"
 import { BiBell } from "react-icons/bi"
-import { RiLineChartFill } from "react-icons/ri";
+import { RiLineChartFill } from "react-icons/ri"
+import { FiAlertCircle } from "react-icons/fi"
 //* DATA
 import { dataCenter } from '../Product/DATA/DATA'
 //* CSS
@@ -30,7 +32,7 @@ function ProductDetail() {
 
 
     return (
-        <>
+        <div className='manage-all-productdetail'>
             <div className='productDetail-top'>
                 <section>
                     <img src={objectProduct.imgsrc} alt="" />
@@ -107,7 +109,11 @@ function ProductDetail() {
                                 <section className='mx-1'>
                                     <span>رنگ :</span>
                                     <span className='mx-3'>
-                                        {colorNamePersian === '' ? setcolorNamePersian('مشکی') : colorNamePersian}
+                                        {colorNamePersian === '' ?
+                                            setcolorNamePersian(
+                                                objectProduct.color.map(item => Object.values(item.name)).pop()
+                                            ) : colorNamePersian
+                                        }
                                     </span>
                                 </section>
                                 <section id='box-color'>
@@ -129,18 +135,59 @@ function ProductDetail() {
                                 </section>
                             </div>
                             <section id='vizhegiKala'>
-                                <p className='mx-1'>ویژگی کالاها</p>
-                                <section>
-
-                                </section>
+                                <p className='mx-1'>{objectProduct.Product_characteristics}</p>
+                                <div>
+                                    <section>
+                                        <BsFillCircleFill className='icon-circlefill' />
+                                        <span>{objectProduct.title_internal_memory}</span>
+                                        <span>{objectProduct.internal_memory}</span>
+                                    </section>
+                                    <section>
+                                        <BsFillCircleFill className='icon-circlefill' />
+                                        <span>{objectProduct.title_Screen_size}</span>
+                                        <span>{objectProduct.Screen_size}</span>
+                                    </section>
+                                    <section>
+                                        <BsFillCircleFill className='icon-circlefill' />
+                                        <span>{objectProduct.title_communication_networks}</span>
+                                        <span>{objectProduct.communication_networks}</span>
+                                    </section>
+                                </div>
+                            </section>
+                            <section id="Alert-Samane-Hamta">
+                                <FiAlertCircle id='icon-alert' />
+                                <p>{objectProduct.Samane_Hamta}</p>
                             </section>
                         </div>
 
-                        <section className='box2'></section>
+
+                        <div className='box2'>
+                            <section id='head'>
+                                <p>{objectProduct.title_Seller}</p>
+                            </section>
+                            <section id='product-salar'>
+                                <img src={objectProduct.Salar_pic} alt="" width="22" height="22" />
+                                <section id='product-some-content'>
+                                    <p>{objectProduct.Seller_name}</p>
+                                    <article>
+                                        <span>{objectProduct.title_rezayat_kharidaran}</span>
+                                        <span>{objectProduct.rezayat_kharidaran}</span>
+                                    </article>
+                                </section>
+                                <span id='Vertical'></span>
+                                <section id='AmalKard'>
+                                    <span>{objectProduct.title_AmalKard}</span>
+                                    <span>{objectProduct.AmalKard}</span>
+                                </section>
+                            </section>
+
+                            <hr />
+                            
+                        </div>
                     </section>
                 </section>
             </div>
-        </>
+        </div>
     )
 }
 
