@@ -6,8 +6,8 @@ body {
   position: relative;
 }
 
-.manage-all-productdetail::before{
-  content: '';
+.manage-all-productdetail::before {
+  content: "";
   width: 100%;
   height: 20px;
   position: absolute;
@@ -527,7 +527,6 @@ p:nth-child(6):hover::after {
   font-size: 15px;
 }
 
-
 .productDetail-top .box-left .box-left-bottom .box2 {
   width: 50%;
   height: 395.8px;
@@ -537,7 +536,6 @@ p:nth-child(6):hover::after {
   bottom: 20px;
   border-radius: 8px;
   border: 1px solid #e4e4e4;
-  overflow: hidden;
 }
 
 .productDetail-top .box-left .box-left-bottom .box2 #head {
@@ -564,7 +562,12 @@ p:nth-child(6):hover::after {
   cursor: pointer;
 }
 
-.productDetail-top .box-left .box-left-bottom .box2 #product-salar #product-some-content{
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar
+  #product-some-content {
   width: max-content;
   height: max-content;
   text-align: start;
@@ -572,17 +575,37 @@ p:nth-child(6):hover::after {
   padding-right: 15px;
 }
 
-.productDetail-top .box-left .box-left-bottom .box2 #product-salar #product-some-content p {
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar
+  #product-some-content
+  p {
   margin: 0;
   padding: 0;
   font-size: 17px;
   font-weight: 600;
 }
 
-.productDetail-top .box-left .box-left-bottom .box2 #product-salar #product-some-content article span{
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar
+  #product-some-content
+  article
+  span {
   padding-left: 6px;
 }
-.productDetail-top .box-left .box-left-bottom .box2 #product-salar #product-some-content article span:last-of-type {
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar
+  #product-some-content
+  article
+  span:last-of-type {
   color: #00a049;
 }
 
@@ -600,14 +623,150 @@ p:nth-child(6):hover::after {
   right: 45px;
 }
 
-.productDetail-top .box-left .box-left-bottom .box2 #product-salar #AmalKard span {
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar
+  #AmalKard
+  span {
   margin-left: 10px;
   font-size: 16px;
   font-weight: 400;
 }
 
-.productDetail-top .box-left .box-left-bottom .box2 #product-salar #AmalKard span:last-of-type {
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar
+  #AmalKard
+  span:last-of-type {
   color: #00a049;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right {
+  width: 350px;
+  height: 393px;
+  position: absolute;
+  left: 26em;
+  top: 0;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  display: block;
+  border: 1px solid gold;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  > section {
+  width: 100%;
+  height: auto;
+  direction: rtl;
+  text-align: start;
+  display: flex;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  > section
+  p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-right: 0.1rem;
+  padding: 25px;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #box1
+  img {
+  transform: translate(-10px, 24px);
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #box2 {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #box2
+  h1 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #00a049;
+  font-weight: bolder;
+  direction: ltr;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #box2
+  h3 {
+  text-align: center;
+  margin: 0;
+  padding: 6px 0 0 0;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar:hover
+  + #product-salar-hidden-right {
+  display: block;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar:hover::after {
+  display: block;
+}
+
+.productDetail-top .box-left .box-left-bottom .box2 #product-salar::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  transform: rotate(50deg);
+  position: absolute;
+  top: 7.1em;
+  left: 25em;
+  background-color: rgb(255, 255, 255);
+  display: none;
 }
 
 .productDetail-top .box-left .box-left-bottom .box2 hr {

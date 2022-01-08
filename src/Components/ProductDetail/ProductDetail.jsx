@@ -180,9 +180,19 @@ function ProductDetail() {
                                     <span>{objectProduct.AmalKard}</span>
                                 </section>
                             </section>
+                            <section id='product-salar-hidden-right'>
+                                <section id='box1'>
+                                    <img src={objectProduct.Salar_pic} alt="" width="24" height="24" />
+                                    <p>دیجی کالا</p>
+                                </section>
+                                <section id='box2'>
+                                    <h1>{objectProduct.rezayat_kharidaran}</h1>
+                                    <h3>رضایت خریداران از کیفیت کالا</h3>
+                                </section>
+                            </section>
 
                             <hr />
-                            
+
                         </div>
                     </section>
                 </section>

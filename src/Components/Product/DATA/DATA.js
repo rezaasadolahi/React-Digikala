@@ -684,7 +684,7 @@ const Data = [
     Salar_pic: DigikalaSalar,
     Seller_name: 'دیجی کالا',
     title_rezayat_kharidaran:'رضایت خریداران',
-    rezayat_kharidaran:'94 %',
+    rezayat_kharidaran:'93.8 %',
     title_AmalKard:'عملکرد',
     AmalKard:'عالی',
   },
