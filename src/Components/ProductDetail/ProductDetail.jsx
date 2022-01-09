@@ -188,6 +188,7 @@ function ProductDetail() {
                                 <section id='box2'>
                                     <h1>{objectProduct.rezayat_kharidaran}</h1>
                                     <h3>رضایت خریداران از کیفیت کالا</h3>
+                                    
                                 </section>
                             </section>
 

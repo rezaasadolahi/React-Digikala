@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 //* Icon
 import { FiUser } from "react-icons/fi"
-import { RiShoppingCartLine } from "react-icons/ri"
+import { RiShoppingCartLine, RiCloseCircleFill } from "react-icons/ri"
 import { IoMdArrowDropdown } from "react-icons/io"
 import { BsDot } from "react-icons/bs"
 import { MdKeyboardArrowLeft } from "react-icons/md"
@@ -27,6 +27,7 @@ import Profile from './Images/profile.svg'
 function Heade() {
     const dispatch = useDispatch()
     const valPishnahad = useSelector(state => state.Main_search.searche)
+    const BoxSearch = useRef(null)
 
     const [searchBox, setSearchBox] = useState('')
 
@@ -79,6 +80,18 @@ function Heade() {
 
 
 
+    //* Icon clear the Search Box
+    const handleClearBoxSearch = () => {
+        setSearchBox('')
+        setStatusFindProduct(true)
+        setTimeout(() => {
+            BoxSearch.current.value = ''
+        }, 1)
+    }
+
+
+
+
 
 
     return (
@@ -96,8 +109,12 @@ function Heade() {
                         placeholder='جستجو در دیجی کالا'
                         onChange={handleChanle}
                         value={valPishnahad || searchBox}
+                        ref={BoxSearch}
                     />
                 </form>
+                <RiCloseCircleFill onClick={handleClearBoxSearch}
+                    className={searchBox === '' ? 'icon-clear-off' : 'icon-clear-onn'}
+                />
 
 
                 {/* Help to find product */}
