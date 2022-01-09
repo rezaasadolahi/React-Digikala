@@ -1,4 +1,3 @@
-
 body {
   width: 100%;
   height: 200vh;
@@ -17,6 +16,7 @@ header nav {
   z-index: 3;
   border: none;
   outline: none;
+  box-shadow: 0 7px 8px rgb(0, 0, 0, 0.04);
 }
 
 .Head-search[type="text"] {
@@ -124,8 +124,6 @@ header nav {
   top: 1.9em;
   right: 2em;
 }
-
-
 
 /*===== When login in website =====*/
 

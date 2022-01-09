@@ -665,7 +665,8 @@ const Data = [
     imgsrc: PS18,
     title: "Samsung",
     Available: true,
-    price: 1900000,
+    price: 1_900_000,
+    priceDetail: '1,900,000',
     clickOnProduct: 0,
     MoshakhasatKamel: 'گوشی موبایل سامسونگ مدل A52s 5G SM-A528B/DS دو سیم‌کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت',
     MoshaKhasat_EN: 'Samsung Galaxy A52s 5G SM-A528B/DS Dual SIM 256GB And 8GB Ram Mobile Phone',
@@ -687,6 +688,13 @@ const Data = [
     rezayat_kharidaran:'93.8 %',
     title_AmalKard:'عملکرد',
     AmalKard:'عالی',
+    BeduneSabtMarjui: '99.9%',
+    TahodErsal: '100%',
+    TaminBeMoqe: '100%',
+    Garanti: 'گارانتی 18 ماهه دیجی کالا',
+    MojudiKala: 'موجود در انبار دیجی کالا',
+    TedadKalaDarAnbar: 2,
+    
   },
   {
     phoneName: [

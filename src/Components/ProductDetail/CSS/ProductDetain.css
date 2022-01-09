@@ -655,11 +655,11 @@ p:nth-child(6):hover::after {
   position: absolute;
   left: 26em;
   top: 0;
-  display: block;
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
-  display: block;
-  border: 1px solid gold;
+  border: 1px solid rgb(212, 210, 196);
+  user-select: none;
+  display: none;
 }
 
 .productDetail-top
@@ -753,6 +753,136 @@ p:nth-child(6):hover::after {
   .box-left
   .box-left-bottom
   .box2
+  #product-salar-hidden-right
+  #progress {
+  width: 300px;
+  height: 30px;
+  background-color: rgb(224, 224, 224);
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 14px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #progress
+  #progress1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: inherit;
+  background-color: rgb(255, 0, 0);
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #progress
+  #progress2 {
+  position: absolute;
+  width: 83%;
+  height: inherit;
+  background-color: rgb(8, 219, 1);
+  left: 0;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  hr {
+  transform: translateY(48px);
+  margin-bottom: 58px !important;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #boxAkhar {
+  width: 100%;
+  height: auto;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #boxAkhar
+  > h1 {
+  width: 100%;
+  color: #00a049;
+  font-size: 32px !important;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #boxAkhar
+  p {
+  width: 100%;
+  text-align: center;
+  margin: 17px auto !important;
+  padding: 0 !important;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #boxAkhar
+  ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #boxAkhar
+  li {
+  transform: translate(0, -5px);
+  font-size: 14px !important;
+  padding: 7px;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
+  #product-salar-hidden-right
+  #boxAkhar
+  li
+  p {
+  font-size: 15px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.productDetail-top
+  .box-left
+  .box-left-bottom
+  .box2
   #product-salar:hover::after {
   display: block;
 }
@@ -773,3 +903,77 @@ p:nth-child(6):hover::after {
   width: 86%;
   margin: 2px auto;
 }
+
+.productDetail-top .box-left .box-left-bottom .box2 #Garanti {
+  width: 100%;
+  height: max-content;
+  padding: 13px;  
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.productDetail-top .box-left .box-left-bottom .box2 #Garanti #icon-ShieldCheck {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.productDetail-top .box-left .box-left-bottom .box2 #Garanti p {
+  text-align: end;
+  line-height: 25px;
+  font-size: 16.5px;
+}
+
+.productDetail-top .box-left .box-left-bottom .box2 #MojudiDarAnbar {
+  width: 100%;
+  height: max-content;
+  padding: 13px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.productDetail-top .box-left .box-left-bottom .box2 #MojudiDarAnbar #icon-StockShop {
+  font-size: 20px;
+  margin-left: 15px;
+  color: #0fabc6;
+}
+
+.productDetail-top .box-left .box-left-bottom .box2 #MojudiDarAnbar p {
+  line-height: 25px;
+  font-size: 16.5px;
+}
+
+.productDetail-top .box-left .box-left-bottom .box2 #KharidVaqeimat {
+  width: 100%;
+  height: max-content;
+  padding: 16px;
+}
+
+.productDetail-top .box-left .box-left-bottom .box2 #KharidVaqeimat #qeimat bdo:first-of-type{
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: bolder !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.productDetail-top .box-left .box-left-bottom .box2 #KharidVaqeimat #qeimat bdo:last-of-type{
+  margin-left: 5px;
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+.productDetail-top .box-left .box-left-bottom .box2 #KharidVaqeimat #TedadKalayeMojudDarAnbar {
+  width: 100%;
+  height: auto;
+  text-align: start;
+  float: right;
+  font-size: 17px;
+  color: red;
+  font-weight: bold;
+}
+
+.productDetail-top .box-left .box-left-bottom .box2 #KharidVaqeimat #box-EzafeKardanBeSabadKharid {
+  font-size: 19px !important;
+  padding: 8px !important;
+  background-color: #EF394E;
+  margin-top: 2.1em !important;
+}
+

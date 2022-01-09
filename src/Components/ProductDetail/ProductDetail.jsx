@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 //* Icon
 import { AiOutlineHeart } from "react-icons/ai"
-import { BsShareFill, BsListUl, BsSquareHalf, BsStarFill, BsFillCircleFill } from "react-icons/bs"
+import { BsShareFill, BsListUl, BsSquareHalf, BsStarFill, BsFillCircleFill, BsShieldCheck, BsShop } from "react-icons/bs"
 import { BiBell } from "react-icons/bi"
 import { RiLineChartFill } from "react-icons/ri"
 import { FiAlertCircle } from "react-icons/fi"
@@ -161,6 +161,7 @@ function ProductDetail() {
                         </div>
 
 
+
                         <div className='box2'>
                             <section id='head'>
                                 <p>{objectProduct.title_Seller}</p>
@@ -188,12 +189,52 @@ function ProductDetail() {
                                 <section id='box2'>
                                     <h1>{objectProduct.rezayat_kharidaran}</h1>
                                     <h3>رضایت خریداران از کیفیت کالا</h3>
-                                    
+                                    <div id='progress'>
+                                        <section id='progress1'></section>
+                                        <section id='progress2'></section>
+                                    </div>
+                                    <hr />
+                                    <section id='boxAkhar'>
+                                        <h1>{objectProduct.AmalKard}</h1>
+                                        <p>عملکرد کلی فروشنده</p>
+                                        <ul>
+                                            <li>
+                                                <p>{objectProduct.BeduneSabtMarjui}</p>
+                                                <p>بدون ثبت مرجوعی</p>
+                                            </li>
+                                            <li>
+                                                <p>{objectProduct.TahodErsal}</p>
+                                                <p>تعهد ارسال</p>
+                                            </li>
+                                            <li>
+                                                <p>{objectProduct.TaminBeMoqe}</p>
+                                                <p>تامین به موقع</p>
+                                            </li>
+                                        </ul>
+                                    </section>
                                 </section>
                             </section>
-
                             <hr />
-
+                            <section id='Garanti'>
+                                <BsShieldCheck id='icon-ShieldCheck' />
+                                <p>{objectProduct.Garanti}</p>
+                            </section>
+                            <hr />
+                            <section id='MojudiDarAnbar'>
+                                <BsShop id='icon-StockShop' />
+                                <p>{objectProduct.MojudiKala}</p>
+                            </section>
+                            <hr />
+                            <section id='KharidVaqeimat'>
+                                <section id='qeimat'>
+                                    <bdo dir='ltr'>{objectProduct.priceDetail}</bdo>
+                                    <bdo dir="rtl">تومان</bdo>
+                                </section>
+                                <bdo id='TedadKalayeMojudDarAnbar' dir="rtl">
+                                    تنها {objectProduct.TedadKalaDarAnbar} عدد در انبار باقی مانده
+                                </bdo>
+                                <button className='btn btn-block p-2 text-light' id='box-EzafeKardanBeSabadKharid'>افزودن به سبد خرید</button>
+                            </section>
                         </div>
                     </section>
                 </section>
