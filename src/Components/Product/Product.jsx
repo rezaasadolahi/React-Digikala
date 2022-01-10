@@ -115,8 +115,8 @@ function Product() {
 
     return (
         <>
-            <main id='Product-manage-component'>
-                {searchValue !== '' ?
+            {searchValue !== '' ?
+                <main id='Product-manage-component'>
                     <section className='manage-Tags_product'>
                         <section className='under-main'>
                             <p id='TedadKala'>{getData.length} کالا</p>
@@ -233,11 +233,9 @@ function Product() {
                             <hr width="280" className='mx-auto mt-4 mb-4' />
                         </aside>
                     </section>
-
-                    : null
-                }
-
-            </main >
+                </main >
+                : null
+            }
         </>
     )
 }
