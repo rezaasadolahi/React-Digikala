@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 //* Icon
 import { AiOutlineHeart } from "react-icons/ai"
@@ -21,12 +21,12 @@ function ProductDetail() {
     const { id } = useParams()
 
     let objectProduct = dataCenter.getProductById(id)
-    console.log(objectProduct)
+
 
     // vaqti ruye rang haye kala click mikonim esmesho minevise
     const [colorNamePersian, setcolorNamePersian] = useState('')
 
-
+    const spanColoesName = useRef()
 
 
 
@@ -108,7 +108,7 @@ function ProductDetail() {
                             <div className='color-product pt-5'>
                                 <section className='mx-1'>
                                     <span>رنگ :</span>
-                                    <span className='mx-3'>
+                                    <span className='mx-3' ref={spanColoesName}>
                                         {colorNamePersian === '' ?
                                             setcolorNamePersian(
                                                 objectProduct.color.map(item => Object.values(item.name)).pop()
@@ -227,7 +227,7 @@ function ProductDetail() {
                             <hr />
                             <section id='KharidVaqeimat'>
                                 <section id='qeimat'>
-                                    <bdo dir='ltr'>{objectProduct.priceDetail}</bdo>
+                                    <bdo dir='ltr'>{objectProduct.price}</bdo>
                                     <bdo dir="rtl">تومان</bdo>
                                 </section>
                                 <bdo id='TedadKalayeMojudDarAnbar' dir="rtl">
