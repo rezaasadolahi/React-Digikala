@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 //* Icon
 import { AiOutlineHeart } from "react-icons/ai"
@@ -25,8 +25,6 @@ function ProductDetail() {
 
     // vaqti ruye rang haye kala click mikonim esmesho minevise
     const [colorNamePersian, setcolorNamePersian] = useState('')
-
-    const spanColoesName = useRef()
 
 
 
@@ -108,10 +106,10 @@ function ProductDetail() {
                             <div className='color-product pt-5'>
                                 <section className='mx-1'>
                                     <span>رنگ :</span>
-                                    <span className='mx-3' ref={spanColoesName}>
+                                    <span className='mx-3'>
                                         {colorNamePersian === '' ?
                                             setcolorNamePersian(
-                                                objectProduct.color.map(item => Object.values(item.name)).pop()
+                                                objectProduct.color.map(item => Object.values(item.name)).pop().join('')
                                             ) : colorNamePersian
                                         }
                                     </span>
@@ -119,7 +117,7 @@ function ProductDetail() {
                                 <section id='box-color'>
                                     {
                                         objectProduct.color.map((item, index) =>
-                                            <>
+                                            <React.Fragment key={index}>
                                                 <input type="radio" id={index} name='color' defaultChecked={true} />
                                                 <label
                                                     htmlFor={index}
@@ -129,7 +127,7 @@ function ProductDetail() {
                                                     onClick={() => setcolorNamePersian(item.name)}
                                                 >
                                                 </label>
-                                            </>
+                                            </React.Fragment>
                                         )
                                     }
                                 </section>
