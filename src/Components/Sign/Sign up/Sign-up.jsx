@@ -8,7 +8,7 @@ import { RiCloseCircleFill } from 'react-icons/ri'
 //* Image
 import Logo from '../Images/digikala logo.svg'
 //* Redux
-import { Emailuser } from '../../Redux/ActionCreator/ActionCreator'
+import { Emailuser, Search } from '../../Redux/ActionCreator/ActionCreator'
 
 
 
@@ -28,6 +28,11 @@ function Signup() {
         dispatch(Emailuser(valueBox))
     }
 
+    //* When click on logo Digikala
+    const handleLogoClick = () => {
+        dispatch(Search(''))
+    }
+
 
 
 
@@ -37,8 +42,8 @@ function Signup() {
             <div className='sign-up-web'>
                 <section className='card-signup'>
 
-                    <Link to="/">
-                        <img src={Logo} alt="" />
+                    <Link to="/" onClick={handleLogoClick}>
+                        <img src={Logo} alt="This is a logo website" />
                     </Link>
 
                     <h3>ورود / ثبت ‌نام</h3>

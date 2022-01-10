@@ -8,7 +8,7 @@ import { RiEyeLine, RiEyeOffLine } from 'react-icons/ri'
 //* Image
 import Logo from '../Images/digikala logo.svg'
 //* Redux
-import { PasswordUser } from '../../Redux/ActionCreator/ActionCreator'
+import { PasswordUser, Search } from '../../Redux/ActionCreator/ActionCreator'
 
 
 
@@ -30,18 +30,23 @@ function Signup() {
     const handleSignClick = () => {
         dispatch(PasswordUser(valueBox))
     }
-
-
-
-
     
+    //* When click on logo Digikala
+    const handleLogoClick = () => {
+        dispatch(Search(''))
+    }
+
+
+
+
+
     return (
         <>
             <div className='sign-in-web'>
                 <section className='card-Login'>
 
-                    <Link to="/">
-                        <img src={Logo} alt="" />
+                    <Link to="/" onClick={handleLogoClick}>
+                        <img src={Logo} alt="This is a logo website" />
                     </Link>
 
                     <h3>رمز عبور خود را وارد کنید</h3>

@@ -3,7 +3,7 @@ body {
 }
 
 .manage-all-productdetail {
-  position: relative;
+  position: absolute;
 }
 
 .manage-all-productdetail::before {

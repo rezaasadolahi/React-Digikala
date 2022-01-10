@@ -114,130 +114,131 @@ function Product() {
 
 
     return (
-        <main >
+        <>
+            <main id='Product-manage-component'>
+                {searchValue !== '' ?
+                    <section className='manage-Tags_product'>
+                        <section className='under-main'>
+                            <p id='TedadKala'>{getData.length} کالا</p>
 
-            {searchValue !== '' ?
-                <section className='manage-Tags_product'>
-                    <section className='under-main'>
-                        <p id='TedadKala'>{getData.length} کالا</p>
-
-                        <div className='header-product'>
-                            <section className='manageBoxMoratabSazi'>
-                                <BsFilterLeft id="icon-filterLeft" />
-                                <span>مرتب سازی بر اساس :</span>
-                            </section>
-
-                            <section className='buttons-Fliter'>
-
-                                <input type="radio" name="filters" id="f1" defaultChecked={true} />
-                                <label tabIndex={1} htmlFor='f1' onClick={handleMortabetTarin}>مرتبط ترین</label>
-
-                                <input type="radio" name="filters" id="f2" />
-                                <label tabIndex={1} htmlFor='f2' onClick={handleBishtarinBazdid}>بیشترین بازدید</label>
-
-                                <input type="radio" name="filters" id="f3" />
-                                <label tabIndex={1} htmlFor='f3' onClick={handleGeranTarin}>گران ترین</label>
-
-                                <input type="radio" name="filters" id="f4" ref={checkedRadio} />
-                                <label tabIndex={1} htmlFor='f4' onClick={handleArzanTarin}>ارزان ترین</label>
-                            </section>
-                        </div>
-
-
-                        {
-                            getData.map(item => {
-                                return (
-                                    <Link
-                                        to={`/ProductDetail/${item.id}`}
-                                        onClick={() => handleIncress(item.id)}
-                                        key={item.id}
-                                        placeholder='you can type Samsung'
-                                        className='card-product-a'
-                                    >
-                                        <section className='content'>
-                                            <section className='imgage'>
-                                                <img src={item.imgsrc} alt="" width="190px" height="190px" />
-                                            </section>
-                                            <section className='title'><p>{item.title}</p></section>
-                                            <section className='price'><h1 dir="ltr">تومان {item.price}</h1></section>
-                                        </section>
-                                    </Link>
-                                )
-                            })
-                        }
-                    </section>
-
-
-                    <aside>
-                        <div id='FilterBetween2price'>
-                            <h3 id='title-between-twoPrice'>قیمت (تومان)</h3>
-                            <div>
-                                <section>
-                                    <span className='mt-3 text-center bg-white'>از</span>
-                                    <input
-                                        type="text"
-                                        value={valueSortOne}
-                                        onChange={handleBoxFilterAdadAval}
-                                        placeholder='0'
-                                        className='form-control mt-2'
-                                    />
+                            <div className='header-product'>
+                                <section className='manageBoxMoratabSazi'>
+                                    <BsFilterLeft id="icon-filterLeft" />
+                                    <span>مرتب سازی بر اساس :</span>
                                 </section>
 
-                                <section>
-                                    <span className='mt-3 text-center bg-white'>تا</span>
-                                    <input
-                                        type="text"
-                                        value={valueSortTwo}
-                                        onChange={handleBoxFilterAdadDovom}
-                                        placeholder='0'
-                                        className='form-control mt-2'
-                                    />
+                                <section className='buttons-Fliter'>
+
+                                    <input type="radio" name="filters" id="f1" defaultChecked={true} />
+                                    <label tabIndex={1} htmlFor='f1' onClick={handleMortabetTarin}>مرتبط ترین</label>
+
+                                    <input type="radio" name="filters" id="f2" />
+                                    <label tabIndex={1} htmlFor='f2' onClick={handleBishtarinBazdid}>بیشترین بازدید</label>
+
+                                    <input type="radio" name="filters" id="f3" />
+                                    <label tabIndex={1} htmlFor='f3' onClick={handleGeranTarin}>گران ترین</label>
+
+                                    <input type="radio" name="filters" id="f4" ref={checkedRadio} />
+                                    <label tabIndex={1} htmlFor='f4' onClick={handleArzanTarin}>ارزان ترین</label>
                                 </section>
                             </div>
 
-                            <button onClick={handleFilterprice}
-                                className='btn btn-block btn-primary'
-                                disabled={valueSortOne !== '' && valueSortTwo !== '' ? false : true}
-                            >
-                                اعمال فیلتر قیمت
-                            </button>
-                        </div>
 
-                        <hr width="280" className='mx-auto mt-4 mb-4'/>
-
-                        <section className='pishnahadSearch'>
-                            <section className='head'>
-                                <h2>جستجو های مرتبط</h2>
-                            </section>
-
-                            <section className='list'>
-                                <section onClick={handlePishnahad}>
-                                    <p>گوشی</p>
-                                    <MdKeyboardArrowLeft className='icon-leftArrow' />
-                                </section>
-                                <section onClick={handlePishnahad}>
-                                    <p>گوشی هوآوی</p>
-                                    <MdKeyboardArrowLeft className='icon-leftArrow' />
-                                </section>
-                                <section onClick={handlePishnahad}>
-                                    <p>گوشی نوکیا</p>
-                                    <MdKeyboardArrowLeft className='icon-leftArrow' />
-                                </section>
-                                <section onClick={handlePishnahad}>
-                                    <p>گوشی آیفون</p>
-                                    <MdKeyboardArrowLeft className='icon-leftArrow' />
-                                </section>
-                            </section>
+                            {
+                                getData.map(item => {
+                                    return (
+                                        <Link
+                                            to={`/ProductDetail/${item.id}`}
+                                            onClick={() => handleIncress(item.id)}
+                                            key={item.id}
+                                            placeholder='you can type Samsung'
+                                            className='card-product-a'
+                                        >
+                                            <section className='content'>
+                                                <section className='imgage'>
+                                                    <img src={item.imgsrc} alt="" width="190px" height="190px" />
+                                                </section>
+                                                <section className='title'><p>{item.title}</p></section>
+                                                <section className='price'><h1 dir="ltr">تومان {item.price}</h1></section>
+                                            </section>
+                                        </Link>
+                                    )
+                                })
+                            }
                         </section>
 
-                        <hr width="280" className='mx-auto mt-4 mb-4'/>
-                    </aside>
-                </section>
 
-                : null
-            }
+                        <aside>
+                            <div id='FilterBetween2price'>
+                                <h3 id='title-between-twoPrice'>قیمت (تومان)</h3>
+                                <div>
+                                    <section>
+                                        <span className='mt-3 text-center bg-white'>از</span>
+                                        <input
+                                            type="text"
+                                            value={valueSortOne}
+                                            onChange={handleBoxFilterAdadAval}
+                                            placeholder='0'
+                                            className='form-control mt-2'
+                                        />
+                                    </section>
 
-        </main >
+                                    <section>
+                                        <span className='mt-3 text-center bg-white'>تا</span>
+                                        <input
+                                            type="text"
+                                            value={valueSortTwo}
+                                            onChange={handleBoxFilterAdadDovom}
+                                            placeholder='0'
+                                            className='form-control mt-2'
+                                        />
+                                    </section>
+                                </div>
+
+                                <button onClick={handleFilterprice}
+                                    className='btn btn-block btn-primary'
+                                    disabled={valueSortOne !== '' && valueSortTwo !== '' ? false : true}
+                                >
+                                    اعمال فیلتر قیمت
+                                </button>
+                            </div>
+
+                            <hr width="280" className='mx-auto mt-4 mb-4' />
+
+                            <section className='pishnahadSearch'>
+                                <section className='head'>
+                                    <h2>جستجو های مرتبط</h2>
+                                </section>
+
+                                <section className='list'>
+                                    <section onClick={handlePishnahad}>
+                                        <p>گوشی</p>
+                                        <MdKeyboardArrowLeft className='icon-leftArrow' />
+                                    </section>
+                                    <section onClick={handlePishnahad}>
+                                        <p>گوشی هوآوی</p>
+                                        <MdKeyboardArrowLeft className='icon-leftArrow' />
+                                    </section>
+                                    <section onClick={handlePishnahad}>
+                                        <p>گوشی نوکیا</p>
+                                        <MdKeyboardArrowLeft className='icon-leftArrow' />
+                                    </section>
+                                    <section onClick={handlePishnahad}>
+                                        <p>گوشی آیفون</p>
+                                        <MdKeyboardArrowLeft className='icon-leftArrow' />
+                                    </section>
+                                </section>
+                            </section>
+
+                            <hr width="280" className='mx-auto mt-4 mb-4' />
+                        </aside>
+                    </section>
+
+                    : null
+                }
+
+            </main >
+        </>
     )
 }
 

@@ -1,0 +1,8 @@
+html,
+*,
+*::before,
+*::after {
+    scroll-behavior: smooth !important;
+    box-sizing: border-box !important;
+}
+
