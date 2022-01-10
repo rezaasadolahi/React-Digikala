@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 //* Icon
 import { AiOutlineHeart } from "react-icons/ai"
 import { BsShareFill, BsListUl, BsSquareHalf, BsStarFill, BsFillCircleFill, BsShieldCheck, BsShop } from "react-icons/bs"
@@ -22,9 +23,12 @@ function ProductDetail() {
 
     let objectProduct = dataCenter.getProductById(id)
 
-
     // vaqti ruye rang haye kala click mikonim esmesho minevise
     const [colorNamePersian, setcolorNamePersian] = useState('')
+
+    //* Sign up / in
+    const Email = useSelector(state => state.Email.EmailUser)
+    const Password = useSelector(state => state.Password.PasswordUser)
 
 
 
@@ -231,7 +235,14 @@ function ProductDetail() {
                                 <bdo id='TedadKalayeMojudDarAnbar' dir="rtl">
                                     تنها {objectProduct.TedadKalaDarAnbar} عدد در انبار باقی مانده
                                 </bdo>
-                                <button className='btn btn-block p-2 text-light' id='box-EzafeKardanBeSabadKharid'>افزودن به سبد خرید</button>
+                                <button
+                                    className='btn btn-block p-2 text-light'
+                                    id='box-EzafeKardanBeSabadKharid'
+                                    disabled={Email === '' && Password === '' ? true : false}
+                                    title={Email === '' && Password === '' ? 'برای خرید کالا اول ثبت نام کنید یا وارد حساب کاربری خود شوید' : null}
+                                >
+                                    افزودن به سبد خرید
+                                </button>
                             </section>
                         </div>
                     </section>
