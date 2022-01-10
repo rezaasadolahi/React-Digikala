@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 //* Icon
 import { FiUser } from "react-icons/fi"
 import { RiShoppingCartLine, RiCloseCircleFill } from "react-icons/ri"
@@ -17,8 +17,6 @@ import DATAFindText from './DATA/DATA'
 //* Images
 import Logo from './Images/digikala logo.svg'
 import Profile from './Images/profile.svg'
-//* Components
-import Product from '../Product/Product'
 
 
 
@@ -28,6 +26,7 @@ function Heade() {
     const dispatch = useDispatch()
     const valPishnahad = useSelector(state => state.Main_search.searche)
     const BoxSearch = useRef(null)
+    let navigate = useNavigate()
 
     const [searchBox, setSearchBox] = useState('')
 
@@ -38,10 +37,12 @@ function Heade() {
     }
 
     const handleSubmit = (e) => {
+        navigate('/Product')
         e.preventDefault()
         dispatch(Search(searchBox))
         setStatusFindProduct(!statusFindProduct)
     }
+
 
 
 
@@ -57,6 +58,7 @@ function Heade() {
 
 
     const handleHepFindProduct = (name) => {
+        navigate('/Product')
         setSearchBox(name)
         dispatch(Search(name))
         setStatusFindProduct(!statusFindProduct)

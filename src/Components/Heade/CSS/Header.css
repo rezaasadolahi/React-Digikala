@@ -151,10 +151,9 @@ header nav {
   box-shadow: 0 3px 8px 0 rgb(0 0 0 / 30%);
   background: #ffffff;
   border-radius: 8px;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: none;
   height: 269px;
-  overflow: hidden;
 }
 
 .miniPageAccount > section {

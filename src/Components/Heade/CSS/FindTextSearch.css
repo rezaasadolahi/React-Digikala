@@ -13,6 +13,9 @@
     box-shadow: 0 1px 3px 1px rgba(128, 128, 128, 0.836);
     z-index: 1;
     padding-top: 23px;
+
+    direction: rtl;
+    text-align: end;
 }
 
 .helo-to-find-value-searchBox .all-text-findValue h4 {
@@ -20,7 +23,8 @@
     line-height: 38px;
     cursor: pointer;
     user-select: none;
-    text-indent: 39rem;
+    direction: ltr;
+    padding-right: 10px;
 }
 
 
