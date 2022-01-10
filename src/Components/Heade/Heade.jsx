@@ -161,10 +161,10 @@ function Heade() {
                                         <section>
                                             <article>
                                                 <h5>UserName</h5>
-                                                <section id='seeAccount'>
-                                                    <p>مشاهده حساب کاربری</p>
-                                                    <MdKeyboardArrowLeft className='icon-arrowleft' />
-                                                </section>
+                                                    <section id='seeAccount' onClick={() => navigate('/Profile')}>
+                                                        <p>مشاهده حساب کاربری</p>
+                                                        <MdKeyboardArrowLeft className='icon-arrowleft' />
+                                                    </section>
                                                 <section className='valet'>
                                                     <p>کیف پول</p>
                                                     <p>98800تومان</p>
@@ -214,9 +214,7 @@ function Heade() {
                             </Link>
                         }
                         <span className='Vertical'>|</span>
-                        <Link to="/Profile">
-                            <RiShoppingCartLine className='cart' />
-                        </Link>
+                        <RiShoppingCartLine className='cart' />
                     </section>
                 </nav >
             </header >
