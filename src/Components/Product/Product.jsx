@@ -116,7 +116,7 @@ function Product() {
     return (
         <>
             {searchValue !== '' ?
-                <main id='Product-manage-component'>
+                <main>
                     <section className='manage-Tags_product'>
                         <section className='under-main'>
                             <p id='TedadKala'>{getData.length} کالا</p>

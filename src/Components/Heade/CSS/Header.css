@@ -38,7 +38,7 @@ header nav {
   position: absolute;
   top: 30px;
   right: 158px;
-  z-index: 3;
+  z-index: 3; 
   transform: scale(1.3);
 }
 
@@ -151,7 +151,7 @@ header nav {
   box-shadow: 0 3px 8px 0 rgb(0 0 0 / 30%);
   background: #ffffff;
   border-radius: 8px;
-  /* overflow: hidden; */
+  overflow: hidden;
   display: none;
   height: 269px;
 }

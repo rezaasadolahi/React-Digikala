@@ -97,7 +97,6 @@ function Heade() {
 
 
     return (
-        <>
             <header>
                 <nav>
                     <Link to="/" onClick={handleLogoClick}>
@@ -159,9 +158,9 @@ function Heade() {
 
                                     <div className='miniPageAccount'>
                                         <section>
-                                            <article>
+                                            <article onClick={() => navigate('/Profile')}>
                                                 <h5>UserName</h5>
-                                                    <section id='seeAccount' onClick={() => navigate('/Profile')}>
+                                                    <section id='seeAccount'>
                                                         <p>مشاهده حساب کاربری</p>
                                                         <MdKeyboardArrowLeft className='icon-arrowleft' />
                                                     </section>
@@ -218,9 +217,6 @@ function Heade() {
                     </section>
                 </nav >
             </header >
-
-
-        </>
     )
 }
 
