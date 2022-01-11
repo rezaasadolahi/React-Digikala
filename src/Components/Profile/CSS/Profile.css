@@ -1,7 +1,42 @@
 
-.ManageProfile {
+#ManageProfile {
     width: 100%;
+    height: auto;
+    position: relative;
+    inset: 0;
+    display: flex;
+    margin-top: 20px;
+}
+
+#ManageProfile .box1 {
+    width: 79%;
     height: 100vh;
-    background-color: aqua;
-    z-index: 5000;
+    position: relative;
+    inset: 0;
+    background-color: rgb(158, 252, 252);
+}
+
+#ManageProfile .box2 {
+    width: 23%;
+    height: 100vh;
+    position: relative;
+    inset: 0;
+    background-color: rgb(145, 145, 224);
+    overflow: hidden;
+}
+
+#ManageProfile .box2 > img {
+    width: 300px;
+    height: 80px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+#ManageProfile .box2 #information-account {
+    width: 300px;
+    height: 780px;
+    border-radius: 8px;
+    background-color: rgb(1, 18, 49);
+    margin: 20px auto;
 }

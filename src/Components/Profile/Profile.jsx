@@ -1,7 +1,8 @@
 import React from 'react'
 //* image
 import inviteFriend from './Image/InviteFriend.jpg'
-
+//* CSS
+import './CSS/Profile.css'
 
 
 
@@ -9,16 +10,17 @@ import inviteFriend from './Image/InviteFriend.jpg'
 
 function Profile() {
     return (
-        <>
-            <div id='ManageProfile'>
-                <div className='box1'>
-                </div>
+        <div id='ManageProfile'>
+            <section className='box1'>
+            </section>
 
-                <div className='box2'>
-                    <img src={inviteFriend} alt="Invite Friend" />
-                </div>
-            </div>
-        </>
+            <section className='box2'>
+                <img src={inviteFriend} alt="" />
+                <section id='information-account'>
+
+                </section>
+            </section>
+        </div>
     )
 }
 
