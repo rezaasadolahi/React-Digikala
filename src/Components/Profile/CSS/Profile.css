@@ -31,6 +31,7 @@
     border-radius: 8px;
     display: block;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 #ManageProfile .box2 #information-account {
