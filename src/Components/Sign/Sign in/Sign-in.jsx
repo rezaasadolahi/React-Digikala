@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 //* CSS
 import './CSS/Sign-in.css'
 //* Icons
@@ -19,6 +19,7 @@ import { PasswordUser, Search } from '../../Redux/ActionCreator/ActionCreator'
 
 
 function Signup() {
+    let navigate = useNavigate()
     const dispatch = useDispatch()
     const [valueBox, setValueBox] = useState('')
     const [StatusEye, setStatusEye] = useState(false)
@@ -27,13 +28,17 @@ function Signup() {
         setValueBox(e.target.value)
     }
 
-    const handleSignClick = () => {
-        dispatch(PasswordUser(valueBox))
-    }
-    
     //* When click on logo Digikala
     const handleLogoClick = () => {
         dispatch(Search(''))
+    }
+
+    //* When click on the button page
+    const pageName = useSelector(state => state.WhichPage.PageName)
+    const handleSignClick = () => {
+        // khate zir dar asl undefined barmigardune , vaqti sabtenam mikonim va ruye button click mikonim dakhele hamun safhe i ke budim mimanim
+        pageName.find(item => navigate(item))
+        dispatch(PasswordUser(valueBox))
     }
 
 
@@ -57,14 +62,12 @@ function Signup() {
                             onChange={handleChange}
                             value={valueBox}
                         />
-                        <Link to="/">
-                            <input
-                                type="submit"
-                                onClick={handleSignClick}
-                                value="ادامه"
-                                disabled={valueBox !== '' ? false : true}
-                            />
-                        </Link>
+                        <input
+                            type="submit"
+                            onClick={handleSignClick}
+                            value="ادامه"
+                            disabled={valueBox !== '' ? false : true}
+                        />
                     </form>
 
                     {StatusEye === false ?

@@ -26,3 +26,10 @@ export const PasswordUser = (text) => {
 }
 
 
+//* Vaqti sabtenamkardim va tuye safhe sign in ruye button vorud zadim barmigardim be safeike qablan dakhelesh budim
+export const WhichPage = (text) =>{
+    return {
+        type: ActionType.WHICH_PACH,
+        payload: text
+    }
+}

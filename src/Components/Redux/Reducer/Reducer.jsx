@@ -59,4 +59,21 @@ export const Password = (state = getPassword, action) => {
 }
 
 
+//* Vaqti sabtenamkardim va tuye safhe sign in ruye button vorud zadim barmigardim be safeike qablan dakhelesh budim
+const getPage = {
+    PageName: ''
+}
+
+export const WhichPage = (state = getPage, action) => {
+    switch (action.type) {
+        case ActionType.WHICH_PACH:
+            return {
+                ...state, // dar khat zir address haye page tekrari hazf mishavand
+                PageName: [...new Set(state.PageName), action.payload]
+            }
+
+        default:
+            return state
+    }
+}
 

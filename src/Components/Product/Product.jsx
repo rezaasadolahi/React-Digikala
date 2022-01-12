@@ -9,7 +9,7 @@ import './CSS/Product.css'
 //* DATA
 import { dataCenter } from './DATA/DATA'
 //* Reducer
-import { Search } from '../Redux/ActionCreator/ActionCreator'
+import { Search, WhichPage } from '../Redux/ActionCreator/ActionCreator'
 
 
 
@@ -99,6 +99,7 @@ function Product() {
 
     // Effect
     useEffect(() => {
+        dispatch(WhichPage("/Product"))
         // vaqti search mikonim ke mahsuli ra peida konim khat zir ejra mishe
         const newData = dataCenter.AllData.filter(item => item.phoneName.find(item => item.name.toLowerCase().includes(searchValue.toLowerCase())))
         setGetData(newData)

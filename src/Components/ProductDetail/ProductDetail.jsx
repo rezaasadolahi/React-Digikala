@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 //* Icon
 import { AiOutlineHeart } from "react-icons/ai"
 import { BsShareFill, BsListUl, BsSquareHalf, BsStarFill, BsFillCircleFill, BsShieldCheck, BsShop } from "react-icons/bs"
@@ -11,6 +11,8 @@ import { FiAlertCircle } from "react-icons/fi"
 import { dataCenter } from '../Product/DATA/DATA'
 //* CSS
 import './CSS/ProductDetain.css'
+//* Reducer
+import { WhichPage } from '../Redux/ActionCreator/ActionCreator'
 
 
 
@@ -19,6 +21,7 @@ import './CSS/ProductDetain.css'
 
 
 function ProductDetail() {
+    const dispatch = useDispatch()
     const { id } = useParams()
 
     let objectProduct = dataCenter.getProductById(id)
@@ -29,6 +32,14 @@ function ProductDetail() {
     //* Sign up / in
     const Email = useSelector(state => state.Email.EmailUser)
     const Password = useSelector(state => state.Password.PasswordUser)
+
+
+
+    useEffect(() => {
+        dispatch(WhichPage(`/ProductDetail/${id}`))
+    },[])
+
+
 
 
 
