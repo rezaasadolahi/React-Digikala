@@ -37,8 +37,8 @@ function Signup() {
     const pageName = useSelector(state => state.WhichPage.PageName)
     const handleSignClick = () => {
         // khate zir dar asl undefined barmigardune , vaqti sabtenam mikonim va ruye button click mikonim dakhele hamun safhe i ke budim mimanim
-        pageName.find(item => navigate(item))
         dispatch(PasswordUser(valueBox))
+       return pageName.find(item => navigate(item))
     }
 
 
