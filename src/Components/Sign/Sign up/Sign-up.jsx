@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 //* CSS
 import './CSS/Sign-up.css'
 //* Icons
@@ -34,12 +34,14 @@ function Signup() {
     }
 
 
+    const Email = useSelector(state => state.Email.EmailUser)
+    const Password = useSelector(state => state.Password.PasswordUser)
 
 
 
     return (
         <>
-            <div className='sign-up-web'>
+            <div className={Email !== '' && Password !== '' ? 'fill-Email-Password' : 'sign-up-web'}>
                 <section className='card-signup'>
 
                     <Link to="/" onClick={handleLogoClick}>

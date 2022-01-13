@@ -42,12 +42,15 @@ function Signup() {
     }
 
 
+    const Email = useSelector(state => state.Email.EmailUser)
+    const Password = useSelector(state => state.Password.PasswordUser)
+
 
 
 
     return (
         <>
-            <div className='sign-in-web'>
+            <div className={Email !== '' && Password !== '' ? 'fill-Email-Password' : 'sign-in-web'}>
                 <section className='card-Login'>
 
                     <Link to="/" onClick={handleLogoClick}>

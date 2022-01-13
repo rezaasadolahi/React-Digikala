@@ -10,6 +10,10 @@
   justify-content: center;
 }
 
+.fill-Email-Password {
+  display: none;
+}
+
 .card-Login {
   width: 380px;
   height: 438px;
