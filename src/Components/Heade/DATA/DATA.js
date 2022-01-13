@@ -11,16 +11,10 @@ const findTextInSearchBox = [
         name: "Samsung گوشی"
     },
     {
-        name: "Samsungگوشی"
-    },
-    {
         name: 'موبایل سامسونگ'
     },
     {
         name: 'Samsung موبایل'
-    },
-    {
-        name: 'Samsungموبایل'
     },
     {
         name: 'سامسونگ'
