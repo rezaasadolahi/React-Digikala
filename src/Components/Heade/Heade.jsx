@@ -78,9 +78,11 @@ function Heade() {
 
 
     const exiteAccount = () => {
+        navigate('/')
+        setSearchBox('')
         dispatch(Emailuser(''))
         dispatch(PasswordUser(''))
-        navigate('/')
+        dispatch(Search(''))
     }
 
 
