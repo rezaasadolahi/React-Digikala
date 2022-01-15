@@ -1,43 +1,140 @@
-
 #ManageProfile {
-    width: 100%;
-    height: auto;
-    position: relative;
-    inset: 0;
-    display: flex;
-    margin-top: 20px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  inset: 0;
+  display: flex;
+  margin-top: 20px;
 }
 
 #ManageProfile .box1 {
-    width: 79%;
-    height: 100vh;
-    position: relative;
-    inset: 0;
-    background-color: rgb(158, 252, 252);
+  width: 79%;
+  height: 100vh;
+  position: relative;
+  inset: 0;
+  background-color: rgb(158, 252, 252);
+  /* background-color: #f5f5f5; */
 }
 
 #ManageProfile .box2 {
-    width: 23%;
-    height: 100vh;
-    position: relative;
-    inset: 0;
-    background-color: rgb(145, 145, 224);
-    overflow: hidden;
+  width: 23%;
+  height: 100vh;
+  position: relative;
+  inset: 0;
+  background-color: rgb(145, 145, 224);
+  /* background-color: #f5f5f5; */
+  overflow: hidden;
 }
 
 #ManageProfile .box2 > img {
-    width: 300px;
-    height: 80px;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto;
-    cursor: pointer;
+  width: 300px;
+  height: 80px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+#ManageProfile .box2 #information-account {
+  width: 300px;
+  height: 780px;
+  border-radius: 8px;
+  background-color: rgb(1, 18, 49);
+  margin: 20px auto;
+}
+#ManageProfile .box2 #information-account #account_name {
+  width: inherit;
+  height: 170px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#ManageProfile .box2 #information-account #account_name::before {
+  content: "";
+  width: 280px;
+  height: 1px;
+  position: absolute;
+  background-color: #e0e0e2;
+  margin-top: 12rem;
+  left: 2.2em;
+}
+#ManageProfile .box2 #information-account #account_name #right {
+  width: 20%;
+  height: inherit;
+  background-color: blue;
+}
+#ManageProfile .box2 #information-account #account_name #left {
+  width: 80%;
+  height: inherit;
+  background-color: rgb(115, 255, 0);
+  position: relative;
 }
 
-#ManageProfile .box2 #information-account {
-    width: 300px;
-    height: 780px;
-    border-radius: 8px;
-    background-color: rgb(1, 18, 49);
-    margin: 20px auto;
+#ManageProfile .box2 #information-account #account_name #right #icon-profile {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 0 auto;
 }
+#ManageProfile .box2 #information-account #account_name #right #Vertical_1 {
+  margin: 0 auto;
+  width: 20px;
+  height: 1.5px;
+  background-color: #e0e0e2;
+  transform: rotate(90deg);
+  position: relative;
+  top: 10px;
+}
+#ManageProfile
+  .box2
+  #information-account
+  #account_name
+  #right
+  #Vertical_1::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #e0e0e2;
+  border-radius: 50%;
+  transform: translate(15px, -5px);
+}
+#ManageProfile .box2 #information-account #account_name #right #Vertical_2 {
+  margin: 0 auto;
+  width: 65px;
+  height: 1.5px;
+  background-color: #e0e0e2;
+  transform: rotate(90deg);
+  position: relative;
+  top: 57px;
+  right: 3px;
+}
+#ManageProfile
+  .box2
+  #information-account
+  #account_name
+  #right
+  #Vertical_2::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #e0e0e2;
+  border-radius: 50%;
+  transform: translate(65px, -5px);
+}
+#ManageProfile .box2 #information-account #account_name #left #fullName {
+    width: auto;
+    height: auto;
+    text-align: end;
+    margin-right: 9px;
+    margin-top: 1px;
+    position: absolute;
+    right: 0;
+}
+#ManageProfile .box2 #information-account #account_name #left #fullName p:first-of-type {
+    font-size: 20px;
+    font-weight: bold;
+}
+#ManageProfile .box2 #information-account #account_name #left #fullName p:last-of-type {
+    transform: translateY(-19px);
+}
+
