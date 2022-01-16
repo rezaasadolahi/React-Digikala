@@ -69,7 +69,7 @@ function Signup() {
                             type="submit"
                             onClick={handleSignClick}
                             value="ادامه"
-                            disabled={valueBox !== '' && Email === 'rezaasadollahi0021@gmail.com' ? false : true}
+                            disabled={valueBox !== '' ? false : true}
                         />
                     </form>
 
