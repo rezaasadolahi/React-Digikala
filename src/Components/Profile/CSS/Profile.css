@@ -66,6 +66,8 @@
   height: inherit;
   background-color: rgb(115, 255, 0);
   position: relative;
+  right: 0;
+  top: 0;
 }
 
 #ManageProfile .box2 #information-account #account_name #right #icon-profile {
@@ -76,12 +78,12 @@
 }
 #ManageProfile .box2 #information-account #account_name #right #Vertical_1 {
   margin: 0 auto;
-  width: 20px;
+  width: 40px;
   height: 1.5px;
   background-color: #e0e0e2;
   transform: rotate(90deg);
   position: relative;
-  top: 10px;
+  top: 17px;
 }
 #ManageProfile
   .box2
@@ -95,7 +97,7 @@
   height: 10px;
   background-color: #e0e0e2;
   border-radius: 50%;
-  transform: translate(15px, -5px);
+  transform: translate(28px, -5px);
 }
 #ManageProfile .box2 #information-account #account_name #right #Vertical_2 {
   margin: 0 auto;
@@ -105,7 +107,7 @@
   transform: rotate(90deg);
   position: relative;
   top: 57px;
-  right: 3px;
+  right: 2px;
 }
 #ManageProfile
   .box2
@@ -122,19 +124,31 @@
   transform: translate(65px, -5px);
 }
 #ManageProfile .box2 #information-account #account_name #left #fullName {
-    width: auto;
-    height: auto;
-    text-align: end;
-    margin-right: 9px;
-    margin-top: 1px;
-    position: absolute;
-    right: 0;
+  width: 100%;
+  height: 100%;
+  text-align: end;
+  margin-right: 9px;
+  margin-top: 1px;
+  position: relative;
+  top: 0;
+  right: 5px;
 }
-#ManageProfile .box2 #information-account #account_name #left #fullName p:first-of-type {
-    font-size: 20px;
-    font-weight: bold;
+#ManageProfile
+  .box2
+  #information-account
+  #account_name
+  #left
+  #fullName
+  p:first-of-type {
+  font-size: 20px;
+  font-weight: bold;
 }
-#ManageProfile .box2 #information-account #account_name #left #fullName p:last-of-type {
-    transform: translateY(-19px);
+#ManageProfile
+  .box2
+  #information-account
+  #account_name
+  #left
+  #fullName
+  p:last-of-type {
+  transform: translateY(-19px);
 }
-

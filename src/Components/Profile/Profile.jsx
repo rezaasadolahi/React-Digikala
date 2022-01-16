@@ -24,12 +24,12 @@ function Profile() {
         // Etelate emaili ke sabt shode moqe vorud ya sabtenam va Emaily ke moqe vorud mizanim ra migirim
         let newSetData = DATA_USER.filter(item => item.Email_Address === Email).find(item => item)
         setData(newSetData)
+        // Age Email khali shod bar migardim be safhe Home "/" 
+        if (Email === '') {
+            navigate("/")
+        }
     }, [data])
-    
-    // Age Email khali shod bar migardim be safhe Home "/" 
-    if (Email === '') {
-        navigate("/")
-    }
+
 
 
 
@@ -58,7 +58,7 @@ function Profile() {
                                             <p>{data.phone}</p>
                                         </section>
                                         <section id='valet'>
-
+                                            <p>5465465</p>
                                         </section>
                                     </section>
                                 </section>

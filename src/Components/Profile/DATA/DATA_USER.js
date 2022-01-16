@@ -10,7 +10,7 @@ const DATA_USER = [
     {
         "Full_name": "محمد اسداللهی دهکردی",
         "Email_Address": "mohamadasadolahi52@gmail.com",
-        "valet": 189,
+        "valet": 999,
         "phone": '093444222',
     },
 ]

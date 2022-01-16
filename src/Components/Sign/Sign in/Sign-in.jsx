@@ -38,7 +38,7 @@ function Signup() {
     const handleSignClick = () => {
         // khate zir dar asl undefined barmigardune , vaqti sabtenam mikonim va ruye button click mikonim dakhele hamun safhe i ke budim mimanim
         dispatch(PasswordUser(valueBox))
-       return pageName.find(item => navigate(item))
+        return pageName.find(item => navigate(item))
     }
 
 
@@ -69,7 +69,7 @@ function Signup() {
                             type="submit"
                             onClick={handleSignClick}
                             value="ادامه"
-                            disabled={valueBox !== '' ? false : true}
+                            disabled={valueBox !== '' && Email === 'rezaasadollahi0021@gmail.com' ? false : true}
                         />
                     </form>
 
