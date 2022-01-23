@@ -25,7 +25,7 @@ function Product() {
     const [geranTarin, setGeranTarin] = useState(false)
     const [arzanTarin, setArzanTarin] = useState(false)
 
-    // Bla bordan tedad clickOnProduct dar data baraye filtere bishtarin bazdid
+    // Bala bordan tedad clickOnProduct dar data baraye filtere bishtarin bazdid
     const handleIncress = (ID) => {
         const newData = getData.map(item => {
             if (ID === item.id) {
