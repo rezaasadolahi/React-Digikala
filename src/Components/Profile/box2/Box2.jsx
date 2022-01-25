@@ -86,7 +86,7 @@ function Box2() {
                     <BsMenuButtonWideFill id='icon' />
                     <p>سفارش های من</p>
                 </section>
-                <section>
+                <section onClick={() => navigate('/Profile/Favorit')}>
                     <BsHeart id='icon' />
                     <p>لیست ها</p>
                 </section>

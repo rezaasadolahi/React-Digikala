@@ -1,0 +1,16 @@
+.ManageFavorit {
+  width: 100%;
+  height: auto;
+  position: relative;
+  inset: 0;
+  display: flex;
+  margin-top: 20px;
+}
+
+.ManageFavorit #box1-Favorit {
+  width: 79%;
+  height: 110vh;
+  position: relative;
+  inset: 0;
+  background-color: rgb(68, 145, 233);
+}

@@ -1,5 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+//* Components
+import Box2 from '../Profile/box2/Box2'
+//* CSS
+import './CSS/Favorit.css'
 
 
 
@@ -7,9 +11,13 @@ import { useSelector } from 'react-redux'
 
 function Favorit() {
     return (
-        <>
-            <h1>Favorit</h1>
-        </>
+        <div id='ManageProfile' className='ManageFavorit'>
+            <section id='box1-Favorit'>
+
+            </section>
+
+            <Box2 />
+        </div>
     )
 }
 

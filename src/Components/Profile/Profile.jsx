@@ -19,7 +19,6 @@ function Profile() {
                     <div id='ManageProfile'>
                         <section className='box1'></section>
 
-
                         <Box2 />
                     </div>
                     :
