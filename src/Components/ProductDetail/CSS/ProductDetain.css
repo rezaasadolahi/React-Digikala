@@ -57,6 +57,8 @@ body {
 }
 
 .icons-rightImage p {
+  width: auto;
+  height: auto;
   margin-top: 15px;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -977,3 +979,5 @@ p:nth-child(6):hover::after {
   margin-top: 2.1em !important;
 }
 
+
+/* When click on heart favorit product */

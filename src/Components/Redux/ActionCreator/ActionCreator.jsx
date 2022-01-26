@@ -33,3 +33,14 @@ export const WhichPage = (text) =>{
         payload: text
     }
 }
+
+
+//* Vaqti ruye ghalb tuye product detail mizanim product be list favorit ezafemishe
+export const GetFavorit = (par) => {
+    return {
+        type: ActionType.FAVORIT,
+        payload: par
+    }
+}
+
+

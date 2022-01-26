@@ -20,7 +20,6 @@ function Product() {
     const [getData, setGetData] = useState([])
 
     //* Sort
-
     const [bishtarinBazdid, setBishtarinBazdid] = useState(false)
     const [geranTarin, setGeranTarin] = useState(false)
     const [arzanTarin, setArzanTarin] = useState(false)

@@ -2,7 +2,7 @@ import { ActionType } from '../Action Type/ActionType'
 
 
 
-// use into header
+//* use into header
 const StateValSearchBoxHead = {
     searche: ''
 }
@@ -22,7 +22,7 @@ export const Searchee = (state = StateValSearchBoxHead, action) => {
 
 
 
-// Sign In / Up
+//* Sign In / Up
 const getEmail = {
     EmailUser: ''
 }
@@ -70,6 +70,25 @@ export const WhichPage = (state = getPage, action) => {
             return {
                 ...state, // dar khat zir address haye page tekrari hazf mishavand
                 PageName: [...new Set(state.PageName), action.payload]
+            }
+
+        default:
+            return state
+    }
+}
+
+
+//* Vaqti ruye ghalb tuye product detail mizanim product be list favorit ezafemishe
+const initial_obj_product = {
+    obj_product: []
+}
+export const Get_Favorit = (state = initial_obj_product, action) => {
+
+    switch (action.type) {
+        case ActionType.FAVORIT:
+            return {
+                ...state,
+                obj_product: [...state.obj_product, action.payload]
             }
 
         default:

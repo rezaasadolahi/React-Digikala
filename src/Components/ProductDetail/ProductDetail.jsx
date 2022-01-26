@@ -12,7 +12,7 @@ import { dataCenter } from '../Product/DATA/DATA'
 //* CSS
 import './CSS/ProductDetain.css'
 //* Reducer
-import { WhichPage } from '../Redux/ActionCreator/ActionCreator'
+import { WhichPage, GetFavorit } from '../Redux/ActionCreator/ActionCreator'
 
 
 
@@ -34,10 +34,15 @@ function ProductDetail() {
     const Password = useSelector(state => state.Password.PasswordUser)
 
 
+    // Add to favorit account
+    const handleFavorit = () => {
+        dispatch(GetFavorit(objectProduct))
+    }
+
 
     useEffect(() => {
         dispatch(WhichPage(`/ProductDetail/${id}`))
-    },[])
+    }, [])
 
 
 
@@ -52,7 +57,7 @@ function ProductDetail() {
 
                     <section className='icons-rightImage'>
                         <p aria-label="افزودن به علاقه مندی">
-                            <AiOutlineHeart id="icon-heart" />
+                            <AiOutlineHeart id="icon-heart" onClick={handleFavorit} />
                         </p>
 
                         <p aria-label="ااشتراک گذاری">
