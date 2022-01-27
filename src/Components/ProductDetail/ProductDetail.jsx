@@ -37,13 +37,13 @@ function ProductDetail() {
     const favorites = useSelector(state => state.Get_Favorit.obj_product)
     //* Check mikonim ke product tuye favorite account bashe va age bud icon heart ghermez mishe
     let FavoritFilter = favorites.filter(item => item.id === objectProduct.id)
-    let statusHeart = false
-    let findEqualObject = FavoritFilter.find(item => item) === objectProduct ? !statusHeart : statusHeart
-    console.log(findEqualObject)
+    let statusHeart = FavoritFilter.find(item => item) === objectProduct ? true : false
     //* when click on heart icon
     const handleFavorit = () => {
-        if (!findEqualObject) {
+        if (!statusHeart) {
             dispatch(GetFavorit(objectProduct))
+        } else {
+            console.log('nothing code')
         }
     }
 
@@ -67,7 +67,7 @@ function ProductDetail() {
 
                     <section className='icons-rightImage'>
                         <p aria-label="افزودن به علاقه مندی" onClick={handleFavorit}>
-                            {findEqualObject ?
+                            {statusHeart ?
                                 <RiHeartFill id="icon-heart2" /> :
                                 <AiOutlineHeart id="icon-heart1" />
                             }
