@@ -80,7 +80,7 @@ export const WhichPage = (state = getPage, action) => {
 
 //* Vaqti ruye ghalb tuye product detail mizanim product be list favorit ezafemishe
 const initial_obj_product = {
-    obj_product: [{ id: '' },]
+    obj_product: []
 }
 export const Get_Favorit = (state = initial_obj_product, action) => {
 

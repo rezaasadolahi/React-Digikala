@@ -19,12 +19,9 @@ function Favorit() {
     let result = [...maparr.values()]
 
 
-    useEffect(() => {
-
-    }, [])
 
 
-    
+
 
 
     return (

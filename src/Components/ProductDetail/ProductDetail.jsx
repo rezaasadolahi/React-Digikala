@@ -35,15 +35,15 @@ function ProductDetail() {
 
     //* Add to favorit account and check productDetail object with Redux
     const favorites = useSelector(state => state.Get_Favorit.obj_product)
+    //* Check mikonim ke product tuye favorite account bashe va age bud icon heart ghermez mishe
     let FavoritFilter = favorites.filter(item => item.id === objectProduct.id)
-
-    const handleFavorit = () => {
-        dispatch(GetFavorit(objectProduct))
-    }
-
     let statusHeart = false
     let findEqualObject = FavoritFilter.find(item => item) === objectProduct ? !statusHeart : statusHeart
     console.log(findEqualObject)
+    //* when click on heart icon
+    const handleFavorit = () => {
+        dispatch(GetFavorit(objectProduct))
+    }
 
 
     useEffect(() => {
@@ -51,7 +51,7 @@ function ProductDetail() {
     }, [])
 
 
-    
+
 
 
 
@@ -65,7 +65,7 @@ function ProductDetail() {
 
                     <section className='icons-rightImage'>
                         <p aria-label="افزودن به علاقه مندی" onClick={handleFavorit}>
-                            {findEqualObject === true ?
+                            {findEqualObject ?
                                 <RiHeartFill id="icon-heart2" /> :
                                 <AiOutlineHeart id="icon-heart1" />
                             }
