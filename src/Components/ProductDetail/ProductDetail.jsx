@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { AiOutlineHeart } from "react-icons/ai"
 import { BsShareFill, BsListUl, BsSquareHalf, BsStarFill, BsFillCircleFill, BsShieldCheck, BsShop } from "react-icons/bs"
 import { BiBell } from "react-icons/bi"
-import { RiLineChartFill } from "react-icons/ri"
+import { RiLineChartFill, RiHeartFill } from "react-icons/ri"
 import { FiAlertCircle } from "react-icons/fi"
 //* DATA
 import { dataCenter } from '../Product/DATA/DATA'
@@ -19,14 +19,13 @@ import { WhichPage, GetFavorit } from '../Redux/ActionCreator/ActionCreator'
 
 
 
-
 function ProductDetail() {
     const dispatch = useDispatch()
     const { id } = useParams()
 
     let objectProduct = dataCenter.getProductById(id)
 
-    // vaqti ruye rang haye kala click mikonim esmesho minevise
+    //* vaqti ruye rang haye kala click mikonim esmesho minevise
     const [colorNamePersian, setcolorNamePersian] = useState('')
 
     //* Sign up / in
@@ -34,16 +33,25 @@ function ProductDetail() {
     const Password = useSelector(state => state.Password.PasswordUser)
 
 
-    // Add to favorit account
+    //* Add to favorit account and check productDetail object with Redux
+    const favorites = useSelector(state => state.Get_Favorit.obj_product)
+    let FavoritFilter = favorites.filter(item => item.id === objectProduct.id)
+
     const handleFavorit = () => {
         dispatch(GetFavorit(objectProduct))
     }
+
+    let statusHeart = false
+    let findEqualObject = FavoritFilter.find(item => item) === objectProduct ? !statusHeart : statusHeart
+    console.log(findEqualObject)
 
 
     useEffect(() => {
         dispatch(WhichPage(`/ProductDetail/${id}`))
     }, [])
 
+
+    
 
 
 
@@ -56,8 +64,12 @@ function ProductDetail() {
                     <img src={objectProduct.imgsrc} alt="" />
 
                     <section className='icons-rightImage'>
-                        <p aria-label="افزودن به علاقه مندی">
-                            <AiOutlineHeart id="icon-heart" onClick={handleFavorit} />
+                        <p aria-label="افزودن به علاقه مندی" onClick={handleFavorit}>
+                            {findEqualObject === true ?
+                                <RiHeartFill id="icon-heart2" /> :
+                                <AiOutlineHeart id="icon-heart1" />
+                            }
+
                         </p>
 
                         <p aria-label="ااشتراک گذاری">

@@ -64,8 +64,13 @@ body {
   transition: all 0.5s ease;
 }
 
-.icons-rightImage #icon-heart {
+.icons-rightImage #icon-heart1 {
   transform: scale(1.8);
+}
+.icons-rightImage #icon-heart2 {
+  transform: scale(1.8);
+  color: red;
+  fill: red;
 }
 
 .icons-rightImage #icon-network {
