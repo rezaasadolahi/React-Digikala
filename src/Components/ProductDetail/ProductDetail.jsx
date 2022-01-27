@@ -42,7 +42,9 @@ function ProductDetail() {
     console.log(findEqualObject)
     //* when click on heart icon
     const handleFavorit = () => {
-        dispatch(GetFavorit(objectProduct))
+        if (!findEqualObject) {
+            dispatch(GetFavorit(objectProduct))
+        }
     }
 
 
