@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 //* Icon
 import { AiOutlineHeart } from "react-icons/ai"
@@ -12,7 +12,7 @@ import { dataCenter } from '../Product/DATA/DATA'
 //* CSS
 import './CSS/ProductDetain.css'
 //* Reducer
-import { WhichPage, GetFavorit } from '../Redux/ActionCreator/ActionCreator'
+import { WhichPage, GetFavorit, RemoveFavorit } from '../Redux/ActionCreator/ActionCreator'
 
 
 
@@ -20,6 +20,8 @@ import { WhichPage, GetFavorit } from '../Redux/ActionCreator/ActionCreator'
 
 
 function ProductDetail() {
+    const location = useLocation()
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const { id } = useParams()
 
@@ -36,20 +38,21 @@ function ProductDetail() {
     //* Add to favorit account and check productDetail object with Redux
     const favorites = useSelector(state => state.Get_Favorit.obj_product)
     //* Check mikonim ke product tuye favorite account bashe va age bud icon heart ghermez mishe
-    let FavoritFilter = favorites.filter(item => item.id === objectProduct.id)
-    let statusHeart = FavoritFilter.find(item => item) === objectProduct ? true : false
+    let FavoritFilter = favorites.filter(item => item === objectProduct).find(item => item)
+    let statusHeart = FavoritFilter === objectProduct ? true : false
+    
     //* when click on heart icon
     const handleFavorit = () => {
         if (!statusHeart) {
             dispatch(GetFavorit(objectProduct))
         } else {
-            console.log('nothing code')
+            dispatch(RemoveFavorit(objectProduct))
         }
     }
 
 
     useEffect(() => {
-        dispatch(WhichPage(`/ProductDetail/${id}`))
+        dispatch(WhichPage(location.pathname))
     }, [])
 
 

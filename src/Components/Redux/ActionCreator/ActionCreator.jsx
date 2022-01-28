@@ -42,5 +42,10 @@ export const GetFavorit = (par) => {
         payload: par
     }
 }
-
+export const RemoveFavorit = (par) => {
+    return {
+        type: ActionType.REMOVE_FAVORIT,
+        payload: par
+    }
+}
 

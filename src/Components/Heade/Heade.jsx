@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 //* Icon
 import { FiUser } from "react-icons/fi"
 import { RiShoppingCartLine, RiCloseCircleFill } from "react-icons/ri"
@@ -24,6 +24,7 @@ import Profile from './Images/profile.svg'
 
 
 function Heade() {
+    const location = useLocation()
     const dispatch = useDispatch()
     const valPishnahad = useSelector(state => state.Main_search.searche)
     const BoxSearch = useRef(null)
@@ -53,7 +54,7 @@ function Heade() {
     const [statusFindProduct, setStatusFindProduct] = useState(false)
 
     useEffect(() => {
-        dispatch(WhichPage("/"))
+        dispatch(WhichPage(location.pathname))
         const newData = DATAFindText.filter(item => item.name.toLowerCase().includes(searchBox.toLowerCase()))
         setGetFindData(newData)
     }, [searchBox])

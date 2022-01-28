@@ -200,7 +200,8 @@
   padding: 14px;
 }
 
-#ManageProfile #outher-informations > section {
+#ManageProfile #outher-informations > section,
+#favorit-button {
   width: 100%;
   height: 50px;
   display: flex;
@@ -212,14 +213,26 @@
   padding-bottom: 2px;
   transition: all 0.3s ease;
   user-select: none;
+  border: none;
+  outline: none;
 }
 
 #ManageProfile #outher-informations section #icon {
   margin-left: 20px;
 }
+#ManageProfile #outher-informations #favorit-button #icon {
+  margin-left: 20px;
+}
 
 #ManageProfile #outher-informations > section:hover {
   color: #0fabc6;
+}
+#ManageProfile #outher-informations #favorit-button:hover {
+  color: #0fabc6;
+}
+
+#ManageProfile #outher-informations #favorit-button:disabled {
+  color: rgb(141, 5, 204);
 }
 
 #ManageProfile #outher-informations section:nth-child(8n)::before {

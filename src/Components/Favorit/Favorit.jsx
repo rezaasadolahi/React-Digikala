@@ -10,14 +10,13 @@ import './CSS/Favorit.css'
 
 
 function Favorit() {
-    const favorites = useSelector(state => state.Get_Favorit.obj_product)
+    const favorites = useSelector(state => state.Get_Favorit.obj_product).filter(Boolean)
     //* Remove Duplicate product Favorit
     let dataArr = favorites.map(item => {
         return [JSON.stringify(item), item]
     })
     let maparr = new Map(dataArr)
     let result = [...maparr.values()]
-
 
 
 

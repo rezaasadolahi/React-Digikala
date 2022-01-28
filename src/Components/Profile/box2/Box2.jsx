@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './CSS/Box2.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 //* Icon
 import { MdKeyboardArrowLeft } from "react-icons/md"
 import { BsMenuButtonWideFill, BsHeart, BsChat, BsSignpostSplit, BsCreditCard, BsClock, BsBoxArrowRight } from "react-icons/bs"
@@ -21,8 +21,11 @@ import DATA_USER from '../DATA/DATA_USER'
 
 
 function Box2() {
+    const location = useLocation()
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const nameFavorit = useRef()
+    const [getNameFavorit, setgetNameFavorit] = useState()
     const [data, setData] = useState('')
     const Email = useSelector(state => state.Email.EmailUser)
 
@@ -42,7 +45,10 @@ function Box2() {
         if (Email === '') {
             navigate("/")
         }
+        setgetNameFavorit(nameFavorit.current.getAttribute("location"))
     }, [data, Email])
+
+
 
 
 
@@ -86,10 +92,14 @@ function Box2() {
                     <BsMenuButtonWideFill id='icon' />
                     <p>سفارش های من</p>
                 </section>
-                <section onClick={() => navigate('/Profile/Favorit')}>
+                <button
+                    onClick={() => navigate('/Profile/Favorit')}
+                    id="favorit-button"
+                    disabled={getNameFavorit === location.pathname ? true : false}
+                >
                     <BsHeart id='icon' />
-                    <p>لیست ها</p>
-                </section>
+                    <p ref={nameFavorit} location="/Profile/Favorit">لیست علاقه مندی ها</p>
+                </button>
                 <section>
                     <BsChat id='icon' />
                     <p>نظرات</p>

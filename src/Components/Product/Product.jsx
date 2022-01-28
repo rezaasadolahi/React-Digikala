@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 //* Icons
 import { BsFilterLeft } from "react-icons/bs"
 import { MdKeyboardArrowLeft } from "react-icons/md"
@@ -15,6 +15,7 @@ import { Search, WhichPage } from '../Redux/ActionCreator/ActionCreator'
 
 
 function Product() {
+    const location = useLocation()
     const searchValue = useSelector(state => state.Main_search.searche)
     const dispatch = useDispatch()
     const [getData, setGetData] = useState([])
@@ -98,7 +99,7 @@ function Product() {
 
     // Effect
     useEffect(() => {
-        dispatch(WhichPage("/Product"))
+        dispatch(WhichPage(location.pathname))
         // vaqti search mikonim ke mahsuli ra peida konim khat zir ejra mishe
         const newData = dataCenter.AllData.filter(item => item.phoneName.find(item => item.name.toLowerCase().includes(searchValue.toLowerCase())))
         setGetData(newData)
