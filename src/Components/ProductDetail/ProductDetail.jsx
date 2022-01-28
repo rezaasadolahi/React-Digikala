@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, useLocation, useNavigate } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 //* Icon
 import { AiOutlineHeart } from "react-icons/ai"
@@ -21,7 +21,6 @@ import { WhichPage, GetFavorit, RemoveFavorit } from '../Redux/ActionCreator/Act
 
 function ProductDetail() {
     const location = useLocation()
-    const navigate = useNavigate()
     const dispatch = useDispatch()
     const { id } = useParams()
 

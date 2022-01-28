@@ -9,8 +9,88 @@
 
 .ManageFavorit #box1-Favorit {
   width: 79%;
-  height: 110vh;
+  height: max-content;
   position: relative;
   inset: 0;
-  background-color: rgb(68, 145, 233);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+}
+
+.ManageFavorit #box1-Favorit #manage-favoritBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: start;
+  direction: rtl;
+}
+
+.ManageFavorit #box1-Favorit #favorit-Item {
+  width: 50%;
+  height: max-content;
+  display: flex;
+  justify-content: start;
+  flex-direction: row-reverse;
+  direction: rtl;
+  align-items: center;
+}
+
+.ManageFavorit #box1-Favorit #favorit-Item:not(:nth-child(2), :nth-child(1)) {
+  margin-top: 3em;
+}
+
+.ManageFavorit #box1-Favorit #favorit-Item article {
+  direction: rtl;
+  text-align: start;
+  padding: 10px;
+}
+
+.ManageFavorit #box1-Favorit #favorit-Item > ul {
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ManageFavorit #box1-Favorit #favorit-Item > ul h2 {
+  position: absolute;
+  top: -2em;
+  left: 40px;
+  transform: rotate(-90deg);
+}
+
+.ManageFavorit #box1-Favorit #favorit-Item > ul h2:focus + li {
+  display: block;
+}
+
+.ManageFavorit #box1-Favorit #favorit-Item > ul li {
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  text-align: start;
+  font-size: 1.3em;
+  color: #b2001a;
+  text-indent: 15px;
+  user-select: none;
+  display: none;
+  position: absolute;
+  top: -1em;
+  left: 43px;
+}
+
+.ManageFavorit #box1-Favorit #favorit-Item article > p {
+  font-size: 1.25em;
+  width: 81%;
+}
+
+.ManageFavorit #box1-Favorit #favorit-Item article #link-a {
+  display: block !important;
+  color: rgb(0, 0, 0);
+  font-size: 1.28em;
+  color: #12b4cd;
+  width: max-content;
 }
