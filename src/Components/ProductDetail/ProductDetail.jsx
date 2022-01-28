@@ -27,6 +27,9 @@ function ProductDetail() {
 
     let objectProduct = dataCenter.getProductById(id)
 
+    //* below state use for reload component
+    const [reloadLocation, setReloadLocation] = useState()
+
     //* vaqti ruye rang haye kala click mikonim esmesho minevise
     const [colorNamePersian, setcolorNamePersian] = useState('')
 
@@ -40,13 +43,14 @@ function ProductDetail() {
     //* Check mikonim ke product tuye favorite account bashe va age bud icon heart ghermez mishe
     let FavoritFilter = favorites.filter(item => item === objectProduct).find(item => item)
     let statusHeart = FavoritFilter === objectProduct ? true : false
-    
+
     //* when click on heart icon
     const handleFavorit = () => {
         if (!statusHeart) {
             dispatch(GetFavorit(objectProduct))
         } else {
             dispatch(RemoveFavorit(objectProduct))
+            setReloadLocation({})
         }
     }
 
