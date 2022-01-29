@@ -7,7 +7,8 @@ import Box2 from '../Profile/box2/Box2'
 import { MdKeyboardArrowLeft } from "react-icons/md"
 //* CSS
 import './CSS/Favorit.css'
-
+//* Redux
+import { RemoveFavorit } from '../Redux/ActionCreator/ActionCreator'
 
 
 
@@ -23,9 +24,14 @@ function Favorit() {
     let maparr = new Map(dataArr)
     let result = [...maparr.values()]
 
+    //* Remove Favorit Product from account
+    const handleRemove = (itemObj) => {
+        dispatch(RemoveFavorit(itemObj))
+    }
 
 
 
+    
 
     return (
         <div id='ManageProfile' className='ManageFavorit'>
@@ -35,8 +41,7 @@ function Favorit() {
                         result.map(item => (
                             <div key={item.id} id="favorit-Item">
                                 <ul>
-                                    <h2 tabIndex="1">...</h2>
-                                    <li>حذف کالا</li>
+                                    <li onClick={() => handleRemove(item)}>حذف کالا</li>
                                 </ul>
                                 <article>
                                     <p>{item.MoshakhasatKamel}</p>

@@ -81,7 +81,6 @@ export const WhichPage = (state = getPage, action) => {
 //* Vaqti ruye ghalb tuye product detail mizanim product be list favorit ezafemishe
 const initial_obj_product = {
     obj_product: [],
-    remove: undefined
 }
 export const Get_Favorit = (state = initial_obj_product, action) => {
 
@@ -95,11 +94,10 @@ export const Get_Favorit = (state = initial_obj_product, action) => {
         case ActionType.REMOVE_FAVORIT:
             return {
                 ...state,
-                remove: delete state.obj_product[state.obj_product.findIndex(item => item === action.payload)]
+                obj_product: state.obj_product.filter(item => item !== action.payload)
             }
 
         default:
             return state
     }
 }
-
