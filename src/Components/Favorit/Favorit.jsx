@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom'
 import Box2 from '../Profile/box2/Box2'
 //* Icon
 import { MdKeyboardArrowLeft } from "react-icons/md"
+import { BsTrash } from "react-icons/bs"
 //* CSS
 import './CSS/Favorit.css'
 //* Redux
 import { RemoveFavorit } from '../Redux/ActionCreator/ActionCreator'
+
 
 
 
@@ -31,7 +33,7 @@ function Favorit() {
 
 
 
-    
+
 
     return (
         <div id='ManageProfile' className='ManageFavorit'>
@@ -41,7 +43,7 @@ function Favorit() {
                         result.map(item => (
                             <div key={item.id} id="favorit-Item">
                                 <ul>
-                                    <li onClick={() => handleRemove(item)}>حذف کالا</li>
+                                    <BsTrash onClick={() => handleRemove(item)} id="icon-trash" />
                                 </ul>
                                 <article>
                                     <p>{item.MoshakhasatKamel}</p>

@@ -65,8 +65,10 @@
   user-select: none;
 }
 
-.ManageFavorit #box1-Favorit #favorit-Item > ul li {
+.ManageFavorit #box1-Favorit #favorit-Item > ul #icon-trash {
   position: absolute;
   top: -2em;
   left: 40px;
+  color: red;
+  font-size: 1.6em;
 }
