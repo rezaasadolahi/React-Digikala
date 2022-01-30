@@ -29,15 +29,9 @@ function Heade() {
     const valPishnahad = useSelector(state => state.Main_search.searche)
     const BoxSearch = useRef(null)
     let navigate = useNavigate()
-
     const [searchBox, setSearchBox] = useState('')
 
-    const handleChanle = (e) => {
-        setSearchBox(e.target.value)
-        setStatusFindProduct(!statusFindProduct)
-        dispatch(Search(e.target.innerText))
-    }
-
+    //* When click "Enter" on keyboard and submit form
     const handleSubmit = (e) => {
         navigate('/Product')
         e.preventDefault()
@@ -45,21 +39,18 @@ function Heade() {
         setStatusFindProduct(!statusFindProduct)
     }
 
-
-
+    //* When change charactor in search box
+    const handleChanle = (e) => {
+        setSearchBox(e.target.value)
+        setStatusFindProduct(!statusFindProduct)
+        dispatch(Search(e.target.innerText))
+    }
 
     //* help to find value
-
     const [getHelpToFindProduct, setGetFindData] = useState([])
     const [statusFindProduct, setStatusFindProduct] = useState(false)
 
-    useEffect(() => {
-        dispatch(WhichPage(location.pathname))
-        const newData = DATAFindText.filter(item => item.name.toLowerCase().includes(searchBox.toLowerCase()))
-        setGetFindData(newData)
-    }, [searchBox])
-
-
+    //* When click on items box help to user for search product
     const handleHepFindProduct = (name) => {
         navigate('/Product')
         setSearchBox(name)
@@ -67,26 +58,15 @@ function Heade() {
         setStatusFindProduct(!statusFindProduct)
     }
 
+    //* When click on Logo Digikala
     const handleLogoClick = () => {
         setSearchBox('')
         dispatch(Search(''))
     }
 
-
     //* When Sign in / up to website
     const Email = useSelector(state => state.Email.EmailUser)
     const Password = useSelector(state => state.Password.PasswordUser)
-
-
-    const exiteAccount = () => {
-        navigate('/')
-        setSearchBox('')
-        dispatch(Emailuser(''))
-        dispatch(PasswordUser(''))
-        dispatch(Search(''))
-    }
-
-
 
     //* Icon clear the Search Box
     const handleClearBoxSearch = () => {
@@ -96,6 +76,28 @@ function Heade() {
             BoxSearch.current.value = ''
         }, 1)
     }
+
+    //* When click on See account
+    const handleGoToAccount = () => {
+        navigate('/Profile')
+        setSearchBox('')
+        dispatch(Search(''))
+    }
+
+    //* When exite from account
+    const exiteAccount = () => {
+        navigate('/')
+        setSearchBox('')
+        dispatch(Emailuser(''))
+        dispatch(PasswordUser(''))
+        dispatch(Search(''))
+    }
+
+    useEffect(() => {
+        dispatch(WhichPage(location.pathname))
+        const newData = DATAFindText.filter(item => item.name.toLowerCase().includes(searchBox.toLowerCase()))
+        setGetFindData(newData)
+    }, [searchBox])
 
 
 
@@ -164,7 +166,7 @@ function Heade() {
 
                                 <div className='miniPageAccount'>
                                     <section>
-                                        <article onClick={() => navigate('/Profile')}>
+                                        <article onClick={handleGoToAccount}>
                                             <h5>UserName</h5>
                                             <section id='seeAccount'>
                                                 <p>مشاهده حساب کاربری</p>
