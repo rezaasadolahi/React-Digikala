@@ -16,14 +16,10 @@ function Lists() {
 
     //* NavTabs
     const handleToggleTab = (index) => {
-        if (clicked === index) {
-            setClicked(index)
-        } else {
-            setClicked(index)
-        }
+        clicked === index ? setClicked(index) : setClicked(index)
     }
 
-
+  
 
 
     return (

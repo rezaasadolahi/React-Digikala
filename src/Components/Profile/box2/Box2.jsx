@@ -38,15 +38,18 @@ function Box2() {
 
 
     useEffect(() => {
-        // Etelate emaili ke sabt shode moqe vorud ya sabtenam va Emaily ke moqe vorud mizanim ra migirim
+        //* Etelate emaili ke sabt shode moqe vorud ya sabtenam va Emaily ke moqe vorud mizanim ra migirim
         let newSetData = DATA_USER.filter(item => item.Email_Address === Email).find(item => item)
         setData(newSetData)
-        // Age Email khali shod bar migardim be safhe Home "/" 
+        //* Age Email khali shod bar migardim be safhe Home "/" 
         if (Email === '') {
             navigate("/")
         }
         setgetNameFavorit(nameFavorit.current.getAttribute("location"))
-    }, [data, Email])
+
+        window.scrollTo(0, 0)
+
+    }, [location.pathname])
 
 
 
