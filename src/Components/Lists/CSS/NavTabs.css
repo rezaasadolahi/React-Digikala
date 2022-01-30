@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  direction: rtl;
+  padding: 5px 0 0 0;
+  position: relative;
+  inset: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #818181f5;
+}
+
+#navbar button {
+  width: auto;
+  height: 35px;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  display: block;
+  cursor: pointer;
+  background-color: transparent;
+  margin-right: 5px;
+  padding: 5px;
+}
+#navbar button:hover {
+  background-color: hsl(0, 23%, 97%);
+}
+#navbar button:nth-child(1) {
+  margin-right: 9px;
+}
+
+.buttonActive {
+  border: 1px solid rgb(31, 29, 29) !important;
+  transition: all 0.3s ease !important;
+}
+
+#navbar button p {
+  line-height: 1px;
+  font-size: 1.3em;
+}

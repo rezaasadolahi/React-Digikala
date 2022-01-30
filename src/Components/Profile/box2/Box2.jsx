@@ -93,12 +93,12 @@ function Box2() {
                     <p>سفارش های من</p>
                 </section>
                 <button
-                    onClick={() => navigate('/Profile/Favorit')}
+                    onClick={() => navigate('/Profile/Lists')}
                     id="favorit-button"
                     disabled={getNameFavorit === location.pathname ? true : false}
                 >
                     <BsHeart id='icon' />
-                    <p ref={nameFavorit} location="/Profile/Favorit">لیست علاقه مندی ها</p>
+                    <p ref={nameFavorit} location="/Profile/Lists">لیست ها</p>
                 </button>
                 <section>
                     <BsChat id='icon' />

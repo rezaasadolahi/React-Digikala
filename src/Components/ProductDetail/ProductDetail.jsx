@@ -72,13 +72,21 @@ function ProductDetail() {
                     <img src={objectProduct.imgsrc} alt="" />
 
                     <section className='icons-rightImage'>
-                        <p aria-label="افزودن به علاقه مندی" onClick={handleFavorit}>
-                            {statusHeart ?
-                                <RiHeartFill id="icon-heart2" /> :
+                        {Email === '' && Password === '' ? (
+                            <span title='برای اضافه کالا به لیست مورد علاقه اول ثبت نام کنید یا وارد حساب کاربری خود شوید'>
                                 <AiOutlineHeart id="icon-heart1" />
-                            }
+                            </span>
+                        ) : (
+                            <p aria-label="افزودن به علاقه مندی" onClick={handleFavorit}>
+                                {Email !== '' && Password !== '' & statusHeart ?
+                                    <RiHeartFill id="icon-heart2" /> :
+                                    <AiOutlineHeart id="icon-heart1" />
+                                }
 
-                        </p>
+                            </p>
+                        )
+                        }
+
 
                         <p aria-label="ااشتراک گذاری">
                             <BsShareFill id='icon-network' />
@@ -284,7 +292,7 @@ function ProductDetail() {
                     </section>
                 </section>
             </div>
-        </div>
+        </div >
     )
 }
 

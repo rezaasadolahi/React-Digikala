@@ -7,7 +7,7 @@ import ProductDetail from './Components/ProductDetail/ProductDetail'
 import Signup from './Components/Sign/Sign up/Sign-up'
 import Signin from './Components/Sign/Sign in/Sign-in'
 import Profile from './Components/Profile/Profile'
-import Favorit from './Components/Favorit/Favorit'
+import Lists from './Components/Lists/Lists'
 
 
 
@@ -23,7 +23,7 @@ function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Signup/Login" element={<Signin />} />
         <Route path="/Profile" element={<Profile />} />
-        <Route path="/Profile/Favorit" element={<Favorit />} />
+        <Route path="/Profile/Lists" element={<Lists />} />
       </Routes>
     </>
   )
