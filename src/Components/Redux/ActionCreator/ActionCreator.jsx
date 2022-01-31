@@ -27,7 +27,7 @@ export const PasswordUser = (text) => {
 
 
 //* Vaqti sabtenamkardim va tuye safhe sign in ruye button vorud zadim barmigardim be safeike qablan dakhelesh budim
-export const WhichPage = (text) =>{
+export const WhichPage = (text) => {
     return {
         type: ActionType.WHICH_PACH,
         payload: text
@@ -49,3 +49,11 @@ export const RemoveFavorit = (par) => {
     }
 }
 
+
+//* Gereftane Data dakhele Product
+export const getDataInProduct = (par) => {
+    return {
+        type: ActionType.GET_DATA_PRODUCT,
+        payload: par
+    }
+}

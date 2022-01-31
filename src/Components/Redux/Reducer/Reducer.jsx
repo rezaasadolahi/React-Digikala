@@ -101,3 +101,23 @@ export const Get_Favorit = (state = initial_obj_product, action) => {
             return state
     }
 }
+
+
+//* Gereftane Data dakhele Product
+const getData = {
+    DataProduct: undefined
+}
+
+export const Get_Data_Product = (state = getData, action) => {
+    switch (action.type) {
+        case ActionType.GET_DATA_PRODUCT:
+            return {
+                ...state,
+                DataProduct: action.payload
+            }
+
+        default:
+            return state
+    }
+}
+

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { Searchee, Email, Password, WhichPage, Get_Favorit } from './Reducer'
+import { Searchee, Email, Password, WhichPage, Get_Favorit, Get_Data_Product } from './Reducer'
 
 
 
@@ -9,7 +9,8 @@ const MainReducer = combineReducers({
     Email: Email,
     Password: Password,
     WhichPage: WhichPage,
-    Get_Favorit: Get_Favorit
+    Get_Favorit: Get_Favorit,
+    Get_Data_Product: Get_Data_Product
 })
 
 export default MainReducer

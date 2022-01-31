@@ -16,6 +16,8 @@ import './CSS/ProductDetain.css'
 import { WhichPage, GetFavorit, RemoveFavorit } from '../Redux/ActionCreator/ActionCreator'
 //* Image
 import alert_1 from './Images/alert_1.png'
+//* Components
+import FirstElastic from './Body ProductDetail/Slider Elastic/FirstElastic/FirstElastic'
 
 
 
@@ -296,7 +298,6 @@ function ProductDetail() {
                 </section>
             </div>
             <div id='between-box'>
-
                 <section id='alert1'>
                     <img src={alert_1} alt="image-alert" id='alert_1' />
                     <button className='btn'>
@@ -304,7 +305,12 @@ function ProductDetail() {
                         <MdKeyboardArrowLeft id='icon-Arrowleft' />
                     </button>
                 </section>
-
+                <section className='slider-swiper-Three'>
+                    <FirstElastic />
+                </section>
+            </div>
+            <div id='end-box'>
+                <h1 align="center" className='p-5'>End box</h1>
             </div>
         </div >
     )

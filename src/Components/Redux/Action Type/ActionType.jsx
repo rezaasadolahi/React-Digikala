@@ -7,5 +7,6 @@ export const ActionType = {
     WHICH_PACH: 'WHICH_PACH',
     FAVORIT: "FAVORIT",
     REMOVE_FAVORIT: 'REMOVE_FAVORIT',
+    GET_DATA_PRODUCT: 'GET_DATA_PRODUCT',
 }
 

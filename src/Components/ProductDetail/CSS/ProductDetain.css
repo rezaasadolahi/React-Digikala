@@ -1025,7 +1025,7 @@ p:nth-child(6):hover::after {
 /* Box between */
 .manage-all-productdetail #between-box {
   width: 100%;
-  height: max-content;
+  height: auto;
   box-sizing: border-box;
   padding: 40px;
 }
@@ -1072,4 +1072,18 @@ p:nth-child(6):hover::after {
 }
 .manage-all-productdetail #between-box #alert1 button #icon-Arrowleft {
   font-size: 1.3em;
+}
+
+.manage-all-productdetail #end-box {
+  width: 100%;
+  height: max-content;
+  background-color: #4e6cf5;
+}
+
+.slider-swiper-Three {
+  width: 100%;
+  height: 440px;
+  position: relative;
+  top: 15px;
+  background-color: darkorange;
 }

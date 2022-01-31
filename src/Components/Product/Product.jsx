@@ -9,7 +9,8 @@ import './CSS/Product.css'
 //* DATA
 import { dataCenter } from './DATA/DATA'
 //* Reducer
-import { Search, WhichPage } from '../Redux/ActionCreator/ActionCreator'
+import { Search, WhichPage, getDataInProduct } from '../Redux/ActionCreator/ActionCreator'
+
 
 
 
@@ -25,7 +26,7 @@ function Product() {
     const [geranTarin, setGeranTarin] = useState(false)
     const [arzanTarin, setArzanTarin] = useState(false)
 
-    // Bala bordan tedad clickOnProduct dar data baraye filtere bishtarin bazdid
+    //* Bala bordan tedad clickOnProduct dar data baraye filtere bishtarin bazdid
     const handleIncress = (ID) => {
         const newData = getData.map(item => {
             if (ID === item.id) {
@@ -89,23 +90,24 @@ function Product() {
         }
     }
 
-
-    // list pishnahad search mahsul
+    //* list pishnahad search mahsul
     const handlePishnahad = (e) => {
         dispatch(Search(e.target.innerText))
     }
 
+    //* Send Data to Redux for use in ProductDetail 'Mahsul pishnahadi'
+    setTimeout(() => {
+        dispatch(getDataInProduct(getData))
+    }, 1)
 
-
-    // Effect
+    
+    //* Effect
     useEffect(() => {
         dispatch(WhichPage(location.pathname))
         // vaqti search mikonim ke mahsuli ra peida konim khat zir ejra mishe
         const newData = dataCenter.AllData.filter(item => item.phoneName.find(item => item.name.toLowerCase().includes(searchValue.toLowerCase())))
         setGetData(newData)
     }, [searchValue])
-
-
 
 
 
