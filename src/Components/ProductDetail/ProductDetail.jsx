@@ -7,12 +7,15 @@ import { BsShareFill, BsListUl, BsSquareHalf, BsStarFill, BsFillCircleFill, BsSh
 import { BiBell } from "react-icons/bi"
 import { RiLineChartFill, RiHeartFill } from "react-icons/ri"
 import { FiAlertCircle } from "react-icons/fi"
+import { MdKeyboardArrowLeft } from "react-icons/md"
 //* DATA
 import { dataCenter } from '../Product/DATA/DATA'
 //* CSS
 import './CSS/ProductDetain.css'
 //* Reducer
 import { WhichPage, GetFavorit, RemoveFavorit } from '../Redux/ActionCreator/ActionCreator'
+//* Image
+import alert_1 from './Images/alert_1.png'
 
 
 
@@ -291,6 +294,17 @@ function ProductDetail() {
                         </div>
                     </section>
                 </section>
+            </div>
+            <div id='between-box'>
+
+                <section id='alert1'>
+                    <img src={alert_1} alt="image-alert" id='alert_1' />
+                    <button className='btn'>
+                        <p>شرکت در قرعه کشی</p>
+                        <MdKeyboardArrowLeft id='icon-Arrowleft' />
+                    </button>
+                </section>
+
             </div>
         </div >
     )
