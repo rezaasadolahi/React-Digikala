@@ -1074,16 +1074,63 @@ p:nth-child(6):hover::after {
   font-size: 1.3em;
 }
 
-.manage-all-productdetail #end-box {
-  width: 100%;
-  height: max-content;
-  background-color: #4e6cf5;
-}
-
-.slider-swiper-Three {
+.manage-all-productdetail #between-box .slider-swiper-One {
   width: 100%;
   height: 440px;
   position: relative;
   top: 15px;
-  background-color: darkorange;
+  background-color: rgb(255, 255, 255);
+}
+
+/* End Box */
+
+.manage-all-productdetail #end-box {
+  width: 100%;
+  height: max-content;
+  background-color: #ffffff;
+}
+
+.manage-all-productdetail #end-box #navbar {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  direction: rtl;
+  padding: 5px 0 0 0;
+  position: relative;
+  inset: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #515151;
+}
+
+.manage-all-productdetail #end-box #navbar button {
+  width: auto;
+  height: 35px;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  display: block;
+  cursor: pointer;
+  background-color: transparent;
+  margin-right: 13px;
+  padding: 5px;
+}
+.manage-all-productdetail #end-box #navbar button:hover {
+  background-color: hsl(0, 23%, 97%);
+}
+.manage-all-productdetail #end-box #navbar button:nth-child(1) {
+  margin-right: 9px;
+}
+
+.manage-all-productdetail #end-box .buttonActive {
+  border-bottom: 3px solid #ef394e !important;
+  border-radius: 2px 2px 0 0 !important;
+  color: #ef394e !important;
+}
+
+.manage-all-productdetail #end-box #navbar button p {
+  line-height: 1px;
+  font-size: 1.3em;
 }

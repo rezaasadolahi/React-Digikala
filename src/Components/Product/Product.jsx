@@ -15,7 +15,7 @@ import { Search, WhichPage, getDataInProduct } from '../Redux/ActionCreator/Acti
 
 
 
-function Product() {
+const Product = () => {
     const location = useLocation()
     const searchValue = useSelector(state => state.Main_search.searche)
     const dispatch = useDispatch()

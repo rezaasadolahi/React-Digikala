@@ -12,9 +12,8 @@ import Favorit from './Favorit'
 
 
 function Lists() {
-    const [clicked, setClicked] = useState(0)
-
     //* NavTabs
+    const [clicked, setClicked] = useState(0)
     const handleToggleTab = (index) => {
         clicked === index ? setClicked(index) : setClicked(index)
     }

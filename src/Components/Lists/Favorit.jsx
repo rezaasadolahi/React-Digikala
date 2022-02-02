@@ -29,7 +29,7 @@ function Favorit() {
         dispatch(RemoveFavorit(itemObj))
     }
 
-    
+
 
 
     return (

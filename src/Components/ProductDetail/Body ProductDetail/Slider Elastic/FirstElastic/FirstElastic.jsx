@@ -11,7 +11,7 @@ import './FirstElastic.css'
 
 
 
-function FirstElastic() {
+const FirstElastic = React.memo(() => {
     const DataProduct = useSelector(state => state.Get_Data_Product.DataProduct)
 
     const setting = {
@@ -39,16 +39,18 @@ function FirstElastic() {
 
             <Carousel {...setting}>
                 {
-                    DataProduct.splice(0, Math.random() * 10 + 5).map(item => {
+                    DataProduct.splice(0, Math.random() * 10 + 5).map((item, index) => {
                         return (
-                            <Card address={item.imgsrc} price={item.price} title={item.MoshakhasatKamel} />
+                            <div key={index}>
+                                <Card id={item.id} address={item.imgsrc} price={item.price} title={item.MoshakhasatKamel} />
+                            </div>
                         )
                     })
                 }
             </Carousel>
         </>
     )
-}
+})
 
 
 export default FirstElastic

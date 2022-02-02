@@ -23,8 +23,8 @@ import FirstElastic from './Body ProductDetail/Slider Elastic/FirstElastic/First
 
 
 
-
-function ProductDetail() {
+ 
+const ProductDetail = () => {
     const location = useLocation()
     const dispatch = useDispatch()
     const { id } = useParams()
@@ -56,6 +56,12 @@ function ProductDetail() {
             dispatch(RemoveFavorit(objectProduct))
             setReloadLocation({})
         }
+    }
+
+    //* NavTabs
+    const [clicked, setClicked] = useState(0)
+    const handleToggleTab = (index) => {
+        clicked === index ? setClicked(index) : setClicked(index)
     }
 
 
@@ -305,12 +311,38 @@ function ProductDetail() {
                         <MdKeyboardArrowLeft id='icon-Arrowleft' />
                     </button>
                 </section>
-                <section className='slider-swiper-Three'>
+                <section className='slider-swiper-One'>
                     <FirstElastic />
                 </section>
             </div>
             <div id='end-box'>
-                <h1 align="center" className='p-5'>End box</h1>
+                <nav id="navbar">
+                    <button onClick={() => handleToggleTab(0)} className={clicked === 0 ? 'buttonActive' : null}>
+                        <p>نقد و بررسی</p>
+                    </button>
+                    <button onClick={() => handleToggleTab(1)} className={clicked === 1 ? 'buttonActive' : null}>
+                        <p>بررسی تخصصی</p>
+                    </button>
+                    <button onClick={() => handleToggleTab(2)} className={clicked === 2 ? 'buttonActive' : null}>
+                        <p>مشخصات</p>
+                    </button>
+                    <button onClick={() => handleToggleTab(3)} className={clicked === 3 ? 'buttonActive' : null}>
+                        <p>دیدگاه کاربران</p>
+                    </button>
+                    <button onClick={() => handleToggleTab(4)} className={clicked === 4 ? 'buttonActive' : null}>
+                        <p>پرسش و پاسخ</p>
+                    </button>
+                </nav>
+                <section>
+                    {
+                        clicked === 0 ? (<h1>Box 0</h1>) :
+                            clicked === 1 ? (<h1>Box 1</h1>) :
+                                clicked === 2 ? (<h1>Box 2</h1>) :
+                                    clicked === 3 ? (<h1>Box 3</h1>) :
+                                        clicked === 4 ? (<h1>Box 4</h1>) : null
+                    }
+                </section>
+
             </div>
         </div >
     )
