@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 //* CSS
 import './CSS/Sign-up.css'
@@ -18,6 +18,7 @@ import { Emailuser, Search } from '../../Redux/ActionCreator/ActionCreator'
 
 function Signup() {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const [valueBox, setValueBox] = useState('')
 
     const handleChange = (e) => {
@@ -26,6 +27,7 @@ function Signup() {
 
     const handleSignupClick = () => {
         dispatch(Emailuser(valueBox))
+        navigate('/Signup/Login', { replace: true })
     }
 
     //* When click on logo Digikala
@@ -56,13 +58,12 @@ function Signup() {
                             onChange={handleChange}
                             value={valueBox}
                         />
-                        <Link to="/Signup/Login" onClick={handleSignupClick}>
-                            <input
-                                type="submit"
-                                value="ورود به دیجی کالا"
-                                disabled={valueBox !== '' ? false : true}
-                            />
-                        </Link>
+                        <input
+                            type="submit"
+                            value="ورود به دیجی کالا"
+                            disabled={valueBox !== '' ? false : true}
+                            onClick={handleSignupClick}
+                        />
                     </form>
                     {valueBox !== '' ?
                         <RiCloseCircleFill onClick={() => setValueBox('')} className='clearValueSignBox' />

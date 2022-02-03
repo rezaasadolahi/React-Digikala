@@ -38,7 +38,7 @@ function Signup() {
     const handleSignClick = () => {
         // khate zir dar asl undefined barmigardune , vaqti sabtenam mikonim va ruye button click mikonim dakhele hamun safhe i ke budim mimanim
         dispatch(PasswordUser(valueBox))
-        return pageName.find(item => navigate(item))
+        return pageName.find(item => navigate(item, { replace: true }))
     }
 
 
