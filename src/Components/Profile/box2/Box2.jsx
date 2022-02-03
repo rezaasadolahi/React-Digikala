@@ -45,8 +45,9 @@ function Box2() {
         if (Email === '') {
             navigate("/")
         }
+        //* get attribute item list
         setgetNameFavorit(nameFavorit.current.getAttribute("location"))
-
+        //* scroll to top page
         window.scrollTo(0, 0)
 
     }, [location.pathname])
