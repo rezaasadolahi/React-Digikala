@@ -39,7 +39,7 @@ const FirstElastic = React.memo(() => {
 
             <Carousel {...setting}>
                 {
-                    DataProduct.splice(0, Math.random() * 10 + 5).map((item, index) => {
+                    DataProduct.splice(Math.random() * 72, Math.random() * 10 + 3).map((item, index) => {
                         return (
                             <div key={index}>
                                 <Card id={item.id} address={item.imgsrc} price={item.price} title={item.MoshakhasatKamel} />
