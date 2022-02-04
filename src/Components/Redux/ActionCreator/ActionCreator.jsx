@@ -57,3 +57,11 @@ export const getDataInProduct = (par) => {
         payload: par
     }
 }
+
+//* Gereftane product dakhele productdetail
+export const GetProduct_Detail = (par) => {
+    return {
+        type: ActionType.GET_PRODUCt_IN_DETAIL,
+        payload: par
+    }
+}

@@ -103,7 +103,7 @@ export const Get_Favorit = (state = initial_obj_product, action) => {
 }
 
 
-//* Gereftane Data dakhele Product
+//* Gereftane Data dakhele Product FirstElastic
 const getData = {
     DataProduct: undefined
 }
@@ -121,3 +121,21 @@ export const Get_Data_Product = (state = getData, action) => {
     }
 }
 
+
+//* Gereftane product dakhele productdetail
+const ProDetail = {
+    Product: ''
+}
+
+export const GetProductDetail = (state = ProDetail, action) => {
+    switch (action.type) {
+        case ActionType.GET_PRODUCt_IN_DETAIL:
+            return {
+                ...state, 
+                Product: action.payload
+            }
+
+        default:
+            return state
+    }
+}

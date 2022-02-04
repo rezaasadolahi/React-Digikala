@@ -13,7 +13,7 @@ import { dataCenter } from '../Product/DATA/DATA'
 //* CSS
 import './CSS/ProductDetain.css'
 //* Reducer
-import { WhichPage, GetFavorit, RemoveFavorit } from '../Redux/ActionCreator/ActionCreator'
+import { WhichPage, GetFavorit, RemoveFavorit, GetProduct_Detail } from '../Redux/ActionCreator/ActionCreator'
 //* Image
 import alert_1 from './Images/alert_1.png'
 //* Components
@@ -71,6 +71,8 @@ const ProductDetail = () => {
 
     useEffect(() => {
         dispatch(WhichPage(location.pathname))
+        //* Send the Product Detail to Redux
+        dispatch(GetProduct_Detail(objectProduct))
     }, [])
 
 

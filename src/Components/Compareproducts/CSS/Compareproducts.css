@@ -1,0 +1,105 @@
+#manageCompare {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+
+#manageCompare > section {
+  width: inherit;
+  height: inherit;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  user-select: none;
+}
+
+#manageCompare #box1,
+#manageCompare #box2 {
+  width: 50%;
+  height: max-content;
+  padding-top: 4rem;
+  box-sizing: border-box;
+  z-index: 2;
+}
+#manageCompare #box1 {
+  background-color: rgb(255, 255, 255);
+}
+#manageCompare #box2 {
+  background-color: rgb(98, 197, 236);
+}
+
+#manageCompare #box2 #ManageModal #boxModal-on {
+  width: 100%;
+  height: 100vh;
+  background-color: #5c5959ad;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+#manageCompare #box2 #ManageModal .boxModal-off {
+  display: none;
+}
+
+#manageCompare #box2 #ManageModal #selectProduct {
+  width: 200px;
+  height: 200px;
+  border: 4px dotted #302e2e;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#manageCompare #box2 #ManageModal .modal-on {
+  width: 81em;
+  height: 558px;
+  overflow-y: auto;
+  display: block;
+  background-color: rgb(253, 253, 253);
+  position: absolute;
+  z-index: 3;
+  right: 15em;
+  bottom: 9em;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#manageCompare #box2 #ManageModal .modal-off {
+  display: none;
+}
+#manageCompare #box2 #ManageModal .modal-on img:hover {
+  cursor: pointer;
+}
+
+
+#manageCompare #box2 #ManageModal #icon-closeBoxModal-on {
+  display: block;
+  cursor: pointer;
+  float: right;
+  margin: 1.2em 7.4em;
+  z-index: 5;
+  position: absolute;
+  right: 0;
+  color: #000000;
+  animation: closeBoxModal 1s ease infinite;
+  font-size: 3em;
+  font-size: xx-large;
+}
+
+#manageCompare #box2 #ManageModal #icon-closeBoxModal-off {
+  display: none;
+}
+
+@keyframes closeBoxModal {
+  from {
+    color: #000000;
+  }
+  to {
+    color: #ff0000;
+  }
+}
+
