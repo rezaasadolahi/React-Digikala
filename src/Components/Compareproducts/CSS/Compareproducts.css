@@ -29,7 +29,7 @@
   background-color: rgb(255, 255, 255);
 }
 #manageCompare #box2 {
-  background-color: rgb(98, 197, 236);
+  background-color: rgb(255, 255, 255);
 }
 
 #manageCompare #box2 #ManageModal #boxModal-on {
@@ -71,17 +71,13 @@
 #manageCompare #box2 #ManageModal .modal-off {
   display: none;
 }
-#manageCompare #box2 #ManageModal .modal-on img:hover {
-  cursor: pointer;
-}
-
 
 #manageCompare #box2 #ManageModal #icon-closeBoxModal-on {
   display: block;
   cursor: pointer;
   float: right;
   margin: 1.2em 7.4em;
-  z-index: 5;
+  z-index: 4;
   position: absolute;
   right: 0;
   color: #000000;
@@ -102,4 +98,17 @@
     color: #ff0000;
   }
 }
+
+#manageCompare #box2 #ManageModal #items {
+  width: 230px;
+  height: max-content;
+  border: 1px solid #292727;
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  margin: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
 
