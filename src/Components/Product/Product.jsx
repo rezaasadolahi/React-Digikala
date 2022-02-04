@@ -100,7 +100,7 @@ const Product = () => {
         dispatch(getDataInProduct(getData))
     }, 1)
 
-    
+
     //* Effect
     useEffect(() => {
         dispatch(WhichPage(location.pathname))
@@ -154,8 +154,8 @@ const Product = () => {
                                             to={`/ProductDetail/${item.id}`}
                                             onClick={() => handleIncress(item.id)}
                                             key={item.id}
-                                            placeholder='you can type Samsung'
                                             className='card-product-a'
+                                            state={getData.length}
                                         >
                                             <section className='content'>
                                                 <section className='imgage'>

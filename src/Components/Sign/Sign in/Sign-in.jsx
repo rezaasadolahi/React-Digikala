@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, Navigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 //* CSS
 import './CSS/Sign-in.css'
@@ -36,11 +36,10 @@ function Signup() {
     //* When click on the button page
     const pageName = useSelector(state => state.WhichPage.PageName)
     const handleSignClick = () => {
-        // khate zir dar asl undefined barmigardune , vaqti sabtenam mikonim va ruye button click mikonim dakhele hamun safhe i ke budim mimanim
         dispatch(PasswordUser(valueBox))
-        return pageName.find(item => navigate(item, { replace: true }))
+        // khate zir dar asl undefined barmigardune , vaqti sabtenam mikonim va ruye button click mikonim dakhele hamun safhe i ke budim mimanim
+        pageName.find(item => navigate(item, { replace: true }))
     }
-
 
     const Email = useSelector(state => state.Email.EmailUser)
     const Password = useSelector(state => state.Password.PasswordUser)

@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from 'react-elastic-carousel'
 import { useSelector } from 'react-redux'
+import { useLocation } from 'react-router-dom'
 //* Components
 import Card from './Card'
 //* CSS
@@ -12,6 +13,7 @@ import './FirstElastic.css'
 
 
 const FirstElastic = React.memo(() => {
+    const location = useLocation()
     const DataProduct = useSelector(state => state.Get_Data_Product.DataProduct)
 
     const setting = {
@@ -39,7 +41,7 @@ const FirstElastic = React.memo(() => {
 
             <Carousel {...setting}>
                 {
-                    DataProduct.splice(Math.random() * 72, Math.random() * 10 + 3).map((item, index) => {
+                    DataProduct.splice(Math.floor(Math.random() * location.state), Math.floor(Math.random() * location.state)).map((item, index) => {
                         return (
                             <div key={index}>
                                 <Card id={item.id} address={item.imgsrc} price={item.price} title={item.MoshakhasatKamel} />

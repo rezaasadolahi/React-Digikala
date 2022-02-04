@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, useLocation } from 'react-router-dom'
+import { useParams, useLocation, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 //* Icon
 import { AiOutlineHeart } from "react-icons/ai"
@@ -23,8 +23,9 @@ import FirstElastic from './Body ProductDetail/Slider Elastic/FirstElastic/First
 
 
 
- 
+
 const ProductDetail = () => {
+    const navigate = useNavigate()
     const location = useLocation()
     const dispatch = useDispatch()
     const { id } = useParams()
@@ -40,7 +41,6 @@ const ProductDetail = () => {
     //* Sign up / in
     const Email = useSelector(state => state.Email.EmailUser)
     const Password = useSelector(state => state.Password.PasswordUser)
-
 
     //* Add to favorit account and check productDetail object with Redux
     const favorites = useSelector(state => state.Get_Favorit.obj_product)
@@ -64,6 +64,10 @@ const ProductDetail = () => {
         clicked === index ? setClicked(index) : setClicked(index)
     }
 
+    //* When click on icon Compare product
+    const handleCompare = () => {
+        navigate('/Compareproducts')
+    }
 
     useEffect(() => {
         dispatch(WhichPage(location.pathname))
@@ -112,7 +116,7 @@ const ProductDetail = () => {
                         </p>
 
                         <p aria-label="مقایسه">
-                            <BsSquareHalf id="icon-SquareHalf" />
+                            <BsSquareHalf id="icon-SquareHalf" onClick={handleCompare} />
                         </p>
 
                         <p aria-label="لیست های عمومی">
@@ -312,7 +316,7 @@ const ProductDetail = () => {
                     </button>
                 </section>
                 <section className='slider-swiper-One'>
-                    <FirstElastic />
+                    <FirstElastic GetAllData={location.state} />
                 </section>
             </div>
             <div id='end-box'>

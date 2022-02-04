@@ -8,6 +8,7 @@ import Signup from './Components/Sign/Sign up/Sign-up'
 import Signin from './Components/Sign/Sign in/Sign-in'
 import Profile from './Components/Profile/Profile'
 import Lists from './Components/Lists/Lists'
+import Compareproducts from './Components/Compareproducts/Compareproducts'
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/Signup/Login" element={<Signin />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Profile/Lists" element={<Lists />} />
+        <Route path="/Compareproducts" element={<Compareproducts />} />
       </Routes>
     </>
   )
