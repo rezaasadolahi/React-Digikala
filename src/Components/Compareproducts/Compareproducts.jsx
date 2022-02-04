@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux'
 import { AiOutlineCloseCircle } from "react-icons/ai"
 //* CSS
 import './CSS/Compareproducts.css'
+//* Image
+import SelectProduct from './image/SelectProduct.png'
 
 
 
@@ -45,7 +47,9 @@ function Compareproducts() {
             {
               infoItem === '' ?
                 <section id='ManageModal'>
-                  <section id='selectProduct' onClick={handleModal}>Icon: Open modal</section>
+                  <section id='selectProduct' onClick={handleModal}>
+                    <img src={SelectProduct} alt="Select Product" className='mt-3' width="350" height="220" />
+                  </section>
                   <section id={modal ? 'boxModal-on' : 'boxModal-off'}>
                     <AiOutlineCloseCircle
                       id={modal ? 'icon-closeBoxModal-on' : 'icon-closeBoxModal-off'}

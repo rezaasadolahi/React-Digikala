@@ -51,6 +51,10 @@
   border: 4px dotted #302e2e;
   margin: 0 auto;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 #manageCompare #box2 #ManageModal .modal-on {
