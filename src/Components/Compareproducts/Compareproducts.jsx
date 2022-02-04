@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 //* Icon
-import { AiOutlineCloseCircle } from "react-icons/ai"
+import { AiOutlineCloseCircle, AiOutlineClose } from "react-icons/ai"
 //* CSS
 import './CSS/Compareproducts.css'
 //* Image
@@ -75,6 +75,7 @@ function Compareproducts() {
             {
               infoItem !== '' ?
                 <section>
+                  <AiOutlineClose id='icon-removeProduct' onClick={() => setInfoItem('')} />
                   <img src={infoItem.imgsrc} alt="image Product" width="200" height="200" />
                   <ul className='list-group'>
                     <li className='list-group-item mt-1'>{infoItem.MoshaKhasat_EN}</li>

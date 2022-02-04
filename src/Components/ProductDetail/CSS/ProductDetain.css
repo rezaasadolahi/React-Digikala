@@ -6,6 +6,8 @@ body {
   width: auto;
   height: max-content;
   position: absolute;
+  top: 9.3em;
+  left: 0;
   background-color: #ffffff;
 }
 

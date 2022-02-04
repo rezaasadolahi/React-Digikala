@@ -199,7 +199,7 @@ const Product = () => {
                                 </div>
 
                                 <button onClick={handleFilterprice}
-                                    className='btn btn-block btn-primary'
+                                    className='btn btn-block btn-primary w-100'
                                     disabled={valueSortOne !== '' && valueSortTwo !== '' ? false : true}
                                 >
                                     اعمال فیلتر قیمت

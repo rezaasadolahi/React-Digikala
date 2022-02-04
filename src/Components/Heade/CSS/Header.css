@@ -1,6 +1,8 @@
 header {
   width: 100%;
   height: 80px;
+  position: relative;
+  /* inset: 0; */
 }
 
 header nav {
@@ -8,10 +10,9 @@ header nav {
   height: inherit;
   background-color: #ffffff;
   position: fixed;
-  z-index: 3;
+  z-index: 6;
   border: none;
   outline: none;
-  box-shadow: 0 7px 8px rgb(0, 0, 0, 0.04);
 }
 
 .Head-search[type="text"] {
@@ -38,7 +39,7 @@ header nav {
   position: absolute;
   top: 30px;
   right: 158px;
-  z-index: 3; 
+  z-index: 3;
   transform: scale(1.3);
 }
 
@@ -342,3 +343,22 @@ header nav {
   z-index: 2;
   display: block;
 }
+
+/* bottomNavbar */
+
+#bottomNavbar {
+  width: 100%;
+  height: 50px;
+}
+
+#bottomNavbar > section {
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 5;
+  background-color: #ffffff;
+  box-shadow: 0 7px 8px rgb(0, 0, 0, 0.04);
+}
+

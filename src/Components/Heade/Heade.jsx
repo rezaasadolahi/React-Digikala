@@ -128,7 +128,6 @@ function Heade() {
 
 
                 {/* Help to find product */}
-
                 {!statusFindProduct ?
                     <section className={searchBox !== '' ? 'onn' : 'off'}>
                         <div className='helo-to-find-value-searchBox'>
@@ -224,6 +223,11 @@ function Heade() {
                     <RiShoppingCartLine className='cart' />
                 </section>
             </nav >
+            <section id="bottomNavbar">
+                <section>
+
+                </section>
+            </section>
         </header >
     )
 }
