@@ -1,0 +1,62 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rosybrown;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slick-slide div {
+  width: max-content !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-slide {
+  transition: all ease-in-out 0.3s;
+  opacity: 0.2;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+
+
+/* Arrows */
+
+.slick-disabled {
+  position: absolute !important;
+  z-index: 5 !important;
+  background-color: #ffffff !important;
+}
+
+.slick-disabled {
+  cursor: default;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.slick-next::before {
+  content: url('../Arrow-Icon/Chevron-right.svg');
+  position: relative;
+  right: 6px;
+  bottom: 3px;
+}
+
+.slick-prev::before {
+  content: url('../Arrow-Icon/Chevron-left.svg');
+  position: relative;
+  right: 6px;
+  bottom: 3px;
+}

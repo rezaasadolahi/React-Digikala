@@ -357,7 +357,7 @@ header nav {
   position: fixed;
   top: 80px;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   background-color: #ffffff;
   box-shadow: 0 7px 8px rgb(0, 0, 0, 0.04);
   overflow: visible;
@@ -369,7 +369,7 @@ header nav {
   position: fixed;
   top: 80px;
   right: 0;
-  z-index: -1;
+  z-index: -2;
   background-color: #ffffff;
   box-shadow: 0 7px 8px rgb(0, 0, 0, 0.04);
   overflow: visible;

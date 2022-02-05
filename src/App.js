@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 //* Components
 import Header from './Components/Heade/Heade'
+import Body from './Components/Body/Body'
 import Product from './Components/Product/Product'
 import ProductDetail from './Components/ProductDetail/ProductDetail'
 import Signup from './Components/Sign/Sign up/Sign-up'
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <Header />
+      <Body />
       <Routes>
         <Route path="/Product" element={<Product />} />
         <Route path="/ProductDetail/:id" element={<ProductDetail />} />

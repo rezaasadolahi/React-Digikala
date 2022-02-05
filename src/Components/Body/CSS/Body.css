@@ -1,0 +1,76 @@
+.main {
+  position: relative;
+  top: 4em;
+  left: 0;
+  width: 100%;
+  height: max-content;
+}
+
+.under-head {
+  width: 100%;
+  height: 481px;
+  position: relative;
+  top: 20px;
+  right: 48px;
+  background-color: transparent;
+}
+
+.under-head > .slider {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.under-head .slider .ImageSlider {
+  position: relative;
+  right: 47px;
+  bottom: 48px;
+  z-index: 1;
+}
+
+picture {
+  margin-top: 38.2px;
+  position: relative;
+  right: 63px;
+  display: flex;
+  flex-direction: column;
+}
+
+picture > img {
+  width: 437px;
+  height: 219px;
+  margin-top: 14px;
+  border-radius: 16px;
+  margin-left: 110px;
+  cursor: pointer;
+}
+
+/* Slider */
+
+.slider-swiper-One {
+  position: relative;
+  top: 4.22em;
+  width: 100%;
+  height: 523px;
+  background-color: #ef394e;
+}
+
+.slider-swiper-Two {
+  position: relative;
+  top: 9.3em;
+  width: 100%;
+  height: 523px;
+  background-color: #6bb927;
+}
+
+.slider-swiper-Three {
+  width: 88.4%;
+  height: 523px;
+  position: relative;
+  top: 13.1em;
+  left: 89px;
+  background-color: darkorange;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+}

@@ -1,0 +1,26 @@
+
+.AmazingOffer {
+  position: absolute;
+  top: 33px;
+  right: 94px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+button {
+  position: absolute;
+  top: 444px;
+  right: 119px;
+  width: 140px;
+  height: 41px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: transparent;
+  padding: 9px 16px;
+  cursor: pointer;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 8px;
+}
