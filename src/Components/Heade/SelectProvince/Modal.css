@@ -1,11 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 /* open modal */
 
 .bottom-open-modal {
+  width: fit-content;
   display: flex;
   border: none;
   outline: none;
@@ -57,7 +53,7 @@
   align-items: center;
   transition: all 0.3s ease-out;
   cursor: default;
-  z-index: 10;
+  z-index: 80;
 }
 
 .Off-modal {
@@ -85,7 +81,7 @@
 }
 
 .On-modal .box .title {
-  width: 23.57%;
+  width: 23.86%;
   height: 50px;
   display: flex;
   flex-direction: row-reverse;
@@ -95,7 +91,7 @@
   padding-bottom: 42px;
   position: fixed;
   top: 163px;
-  right: 38.2%;
+  right: 38.08%;
   z-index: 99;
   background-color: rgb(255, 255, 255);
   border-top-right-radius: 16px;
@@ -177,7 +173,7 @@
   padding: 8px 0;
   position: fixed;
   bottom: 32.6em;
-  right: 42.68rem;
+  right: 42rem;
   border-top: 1px solid #61616180;
   border-bottom: 1px solid #61616180;
   cursor: pointer;

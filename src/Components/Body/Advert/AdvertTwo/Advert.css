@@ -1,0 +1,29 @@
+
+.Duo-Ad-Two {
+  position: relative;
+  top: 12rem;
+  right: 48em;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Duo-Ad-Two img {
+  width: 660px;
+  height: 243px;
+  position: absolute;
+  display: block;
+  border-radius: 16px;
+}
+
+.DuoAd-link-Two {
+  display: block;
+  width: 0 !important;
+  height: 240px;
+  margin-left: 48.6em;
+  padding: 0 !important;
+  border-radius: 16px;
+}

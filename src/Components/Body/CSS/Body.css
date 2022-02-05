@@ -1,9 +1,10 @@
-.main {
-  position: relative;
-  top: 4em;
-  left: 0;
+#main {
   width: 100%;
-  height: max-content;
+  height: 420vh;
+  position: relative;
+  top: 1em;
+  left: 0;
+  background-color: #f5f5f5;
 }
 
 .under-head {

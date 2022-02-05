@@ -1,4 +1,3 @@
-
 .AmazingOffer {
   position: absolute;
   top: 33px;
@@ -7,7 +6,7 @@
   z-index: 1;
 }
 
-button {
+#button-swipper {
   position: absolute;
   top: 444px;
   right: 119px;

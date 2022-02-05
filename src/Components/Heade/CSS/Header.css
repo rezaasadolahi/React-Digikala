@@ -12,6 +12,7 @@ header nav {
   position: fixed;
   border: none;
   outline: none;
+  z-index: 2;
 }
 
 .Head-search[type="text"] {
@@ -351,19 +352,19 @@ header nav {
   display: flex;
 }
 
-#bottomNavbar #box-SelectProvince {
+#bottomNavbar .box-SelectProvince {
   width: 40%;
   height: inherit;
   position: fixed;
   top: 80px;
   left: 0;
-  z-index: 1;
+  z-index: -1;
   background-color: #ffffff;
-  box-shadow: 0 7px 8px rgb(0, 0, 0, 0.04);
+  box-shadow: -5px 7px 8px rgb(0, 0, 0, 0.04);
   overflow: visible;
   background-color: rgb(255, 255, 255);
 }
-#bottomNavbar #box-menus {
+#bottomNavbar .box-menus {
   width: 60%;
   height: inherit;
   position: fixed;
@@ -371,8 +372,20 @@ header nav {
   right: 0;
   z-index: -2;
   background-color: #ffffff;
-  box-shadow: 0 7px 8px rgb(0, 0, 0, 0.04);
+  box-shadow: 5px 7px 8px rgb(0, 0, 0, 0.04);
   overflow: visible;
   background-color: rgb(255, 255, 255);
+}
+
+/* When Scroll page */
+
+#menu-hide {
+  position: fixed;
+  top: -10px !important;
+  visibility: hidden;
+  z-index: -99 !important;
+  border-bottom: 1px solid #ffffff;
+  transition: all 0.8s ease-in-out;
+  overflow: hidden;
 }
 

@@ -1,0 +1,59 @@
+.ad {
+  position: relative;
+  top: 6.9rem;
+  right: 23.7em;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad img {
+  width: 320px;
+  height: 240px;
+  position: absolute;
+  display: block;
+  border-radius: 16px;
+}
+
+.link-ad {
+  display: block;
+  width: 0 !important;
+  height: 240px;
+  margin-left: 24.3em;
+  padding: 0 !important;
+  border-radius: 16px;
+}
+
+
+
+.Duo-Ad-One {
+  position: relative;
+  top: 8rem;
+  right: 48em;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Duo-Ad-One img {
+  width: 660px;
+  height: 243px;
+  position: absolute;
+  display: block;
+  border-radius: 16px;
+}
+
+.DuoAd-link-One {
+  display: block;
+  width: 0 !important;
+  height: 240px;
+  margin-left: 48.6em;
+  padding: 0 !important;
+  border-radius: 16px;
+}

@@ -14,13 +14,13 @@ import Compareproducts from './Components/Compareproducts/Compareproducts'
 
 
 
-
+  
 function App() {
   return (
     <>
       <Header />
-      <Body />
       <Routes>
+        <Route path="/" element={<Body />} />
         <Route path="/Product" element={<Product />} />
         <Route path="/ProductDetail/:id" element={<ProductDetail />} />
         <Route path="/Signup" element={<Signup />} />

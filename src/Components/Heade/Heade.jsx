@@ -32,7 +32,7 @@ function Heade() {
     let navigate = useNavigate()
     const [searchBox, setSearchBox] = useState('')
 
-    //* When click "Enter" on keyboard and submit form
+    //* When Enter on keyboard and submit form
     const handleSubmit = (e) => {
         navigate('/Product')
         e.preventDefault()
@@ -94,11 +94,30 @@ function Heade() {
         dispatch(Search(''))
     }
 
+    //* When Scroll page
+    const box1 = useRef(null)
+    const box2 = useRef(null)
+
+    let prevScrollpos = window.pageYOffset
+    window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset
+        if (prevScrollpos > currentScrollPos) {
+            box1.current.className = "box-SelectProvince"
+            box2.current.className = "box-menus"
+        } else {
+            box1.current.className = "menu-hide"
+            box2.current.className = "menu-hide"
+        }
+        prevScrollpos = currentScrollPos
+    }
+
+
     useEffect(() => {
         dispatch(WhichPage(location.pathname))
         const newData = DATAFindText.filter(item => item.name.toLowerCase().includes(searchBox.toLowerCase()))
         setGetFindData(newData)
     }, [searchBox])
+
 
 
 
@@ -154,14 +173,12 @@ function Heade() {
 
 
                 {/* Sign up */}
-
                 <section className='sign-and-cart'>
                     {Email !== '' & Password !== '' ?
                         <>
                             <button className='boxlogin'>
                                 <IoMdArrowDropdown />
                                 <FiUser className='user-icon2' />
-
 
 
                                 <div className='miniPageAccount'>
@@ -224,12 +241,13 @@ function Heade() {
                     <RiShoppingCartLine className='cart' />
                 </section>
             </nav >
+            {/* Bottom below nav */}
             <section id="bottomNavbar">
-                <section id='box-SelectProvince'>
+                <section className='box-SelectProvince' ref={box1}>
                     {/* Select Province and city */}
                     <SelectProvince />
                 </section>
-                <section id='box-menus'>
+                <section className='box-menus' ref={box2}>
 
                 </section>
             </section>

@@ -35,7 +35,7 @@ function mainSliderSwiperTwo() {
                     className='AmazingOffer'
                     loading="lazy"
                 />
-                <button>
+                <button id='button-swipper'>
                     <FiChevronLeft id='icon-arrowchevronleft' />
                     <span>مشاهده همه</span>
                 </button>
