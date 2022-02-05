@@ -349,16 +349,31 @@ header nav {
 #bottomNavbar {
   width: 100%;
   height: 50px;
+  display: flex;
 }
 
-#bottomNavbar > section {
-  width: inherit;
+#bottomNavbar #box-SelectProvince {
+  width: 40%;
   height: inherit;
   position: fixed;
   top: 80px;
   left: 0;
-  z-index: 5;
+  z-index: 7;
   background-color: #ffffff;
   box-shadow: 0 7px 8px rgb(0, 0, 0, 0.04);
+  overflow: visible;
+  background-color: rgb(255, 255, 255);
+}
+#bottomNavbar #box-menus {
+  width: 60%;
+  height: inherit;
+  position: fixed;
+  top: 80px;
+  right: 0;
+  z-index: 1;
+  background-color: #ffffff;
+  box-shadow: 0 7px 8px rgb(0, 0, 0, 0.04);
+  overflow: visible;
+  background-color: rgb(255, 255, 255);
 }
 

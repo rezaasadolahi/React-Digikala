@@ -17,7 +17,8 @@ import DATAFindText from './DATA/DATA'
 //* Images
 import Logo from './Images/digikala logo.svg'
 import Profile from './Images/profile.svg'
-
+//* Components
+import SelectProvince from './SelectProvince/SelectProvince'
 
 
 
@@ -224,7 +225,11 @@ function Heade() {
                 </section>
             </nav >
             <section id="bottomNavbar">
-                <section>
+                <section id='box-SelectProvince'>
+                    {/* Select Province and city */}
+                    <SelectProvince />
+                </section>
+                <section id='box-menus'>
 
                 </section>
             </section>
