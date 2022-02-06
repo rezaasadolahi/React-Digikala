@@ -95,8 +95,10 @@ function Heade() {
     }
 
     //* When Scroll page
+    const [statusOpenedProvince, setStatusOpenedProvince] = useState(false)
     const box1 = useRef(null)
     const box2 = useRef(null)
+    const zIndexNav = useRef(null)
 
     let prevScrollpos = window.pageYOffset
     window.onscroll = function () {
@@ -105,18 +107,24 @@ function Heade() {
             box1.current.className = "box-SelectProvince"
             box2.current.className = "box-menus"
         } else {
-            box1.current.className = "menu-hide"
-            box2.current.className = "menu-hide"
+            !statusOpenedProvince ? box1.current.className = "menu-hide" : box1.current.className = "box-SelectProvince"
+            !statusOpenedProvince ? box2.current.className = "menu-hide" : box2.current.className = "box-menus"
         }
         prevScrollpos = currentScrollPos
     }
+
 
 
     useEffect(() => {
         dispatch(WhichPage(location.pathname))
         const newData = DATAFindText.filter(item => item.name.toLowerCase().includes(searchBox.toLowerCase()))
         setGetFindData(newData)
-    }, [searchBox])
+        if (!statusOpenedProvince) {
+            document.getElementsByTagName('nav')[0].classList.add("nav-zIndex")
+        } else {
+            document.getElementsByTagName('nav')[0].classList.remove("nav-zIndex")
+        }
+    }, [searchBox, statusOpenedProvince])
 
 
 
@@ -245,7 +253,10 @@ function Heade() {
             <section id="bottomNavbar">
                 <section className='box-SelectProvince' ref={box1}>
                     {/* Select Province and city */}
-                    <SelectProvince />
+                    <SelectProvince
+                        setStatusOpenedProvince={setStatusOpenedProvince}
+                        statusOpenedProvince={statusOpenedProvince}
+                    />
                 </section>
                 <section className='box-menus' ref={box2}>
 

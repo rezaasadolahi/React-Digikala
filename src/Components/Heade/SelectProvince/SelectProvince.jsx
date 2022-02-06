@@ -14,7 +14,7 @@ import County from './DATA/County'
 
 
 
-function SelectProvince() {
+function SelectProvince({ setStatusOpenedProvince, statusOpenedProvince }) {
     const [status, setStatus] = useState(false)
     const [city, setCity] = useState(false)
     const [namesCity, setNamesCity] = useState('')
@@ -36,6 +36,13 @@ function SelectProvince() {
     }
 
 
+    const handleCloseBoxModalProvince = () => {
+        setStatus(!status)
+        setStatusOpenedProvince(!statusOpenedProvince)
+    }
+
+
+
 
 
 
@@ -43,7 +50,7 @@ function SelectProvince() {
         <>
             <section className='bottom-open-modal' onClick={() => setStatus(!status)}>
                 <GrLocation className='location' />
-                <section>
+                <section onClick={() => setStatusOpenedProvince(!statusOpenedProvince)}>
                     {
                         getTargetNameCity === '' ?
                             <span>لطفا شهر و استان خود را انتخاب کنید</span>
@@ -66,7 +73,7 @@ function SelectProvince() {
                 <section className='box'>
                     <section className='title'>
                         <p>انتخاب استان</p>
-                        <AiOutlineClose className='close' onClick={() => setStatus(!status)} />
+                        <AiOutlineClose className='close' onClick={handleCloseBoxModalProvince} />
                     </section>
 
                     {
