@@ -39,7 +39,7 @@ body {
   float: right;
 }
 
-.productDetail-top > section > img {
+.productDetail-top > section > section {
   width: 388.5px;
   height: 388.5px;
   position: absolute;
@@ -303,6 +303,7 @@ p:nth-child(6):hover::after {
 .productDetail-top > section #box-images {
   position: absolute;
   right: 0;
+  top: 28em;
   width: fit-content;
   height: fit-content;
   background-color: rgb(255, 255, 255);

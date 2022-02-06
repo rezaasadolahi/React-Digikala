@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useLocation, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import Zoom from 'react-img-zoom'
 //* Icon
 import { AiOutlineHeart } from "react-icons/ai"
 import { BsShareFill, BsListUl, BsSquareHalf, BsStarFill, BsFillCircleFill, BsShieldCheck, BsShop } from "react-icons/bs"
@@ -86,7 +87,17 @@ const ProductDetail = () => {
         <div className='manage-all-productdetail'>
             <div className='productDetail-top'>
                 <section>
-                    <img src={objectProduct.imgsrc} alt="" />
+                    <section>
+                        <Zoom
+                            img={objectProduct.imgsrc}
+                            zoomScale={4}
+                            width={385}
+                            height={385}
+                            id="imageProduct"
+                            transitionTime={0.5}
+                        />
+                    </section>
+                    {/* <img src={objectProduct.imgsrc} alt="" /> */}
 
                     <section className='icons-rightImage'>
                         {Email === '' && Password === '' ? (
