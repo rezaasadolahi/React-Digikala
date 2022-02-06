@@ -11,7 +11,7 @@ import AdvertOne from './Advert/AdvertOne/AdvertOne'
 import MainSliderSwiperTwo from './Slider Swipper/Slider Swipper Two/MainSliderSwiperTwo'
 import AdvertTwo from './Advert/AdvertTwo/AdvertTwo'
 import FirstElastic from './Slider Elastic/FirstElastic/FirstElastic'
-
+import Footer from '../Footer/Footer'
 
 
 
@@ -54,6 +54,9 @@ function Body() {
             <div className='slider-swiper-Three'>
                 <FirstElastic />
             </div>
+
+            {/* Footer */}
+            <Footer />
         </main>
     )
 }
