@@ -97,7 +97,6 @@ const ProductDetail = () => {
                             transitionTime={0.5}
                         />
                     </section>
-                    {/* <img src={objectProduct.imgsrc} alt="" /> */}
 
                     <section className='icons-rightImage'>
                         {Email === '' && Password === '' ? (
