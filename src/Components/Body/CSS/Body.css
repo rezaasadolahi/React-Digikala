@@ -68,9 +68,9 @@ picture > img {
   width: 88.4%;
   height: 523px;
   position: relative;
-  top: 13.1em;
+  top: 15.5em;
   left: 89px;
-  background-color: darkorange;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   border-radius: 8px;

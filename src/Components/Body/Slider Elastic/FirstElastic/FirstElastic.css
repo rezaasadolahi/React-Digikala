@@ -3,7 +3,7 @@
 .title-elastic-carousel {
   position: absolute;
   top: 14px;
-  right: 35px;
+  right: 15em;
   height: 50px;
   width: max-content;
   z-index: 2;
@@ -14,7 +14,7 @@
   position: absolute;
   width: max-content;
   font-size: 18px;
-  text-indent: -39px;
+  text-indent: -29px;
   user-select: none;
 }
 
@@ -24,14 +24,14 @@
   height: 2px;
   background-color: #000000;
   z-index: 2;
-  right: 18%;
+  right: 20%;
   top: 14%;
   user-select: none;
 }
 
 .line-hr-Two {
   position: absolute;
-  width: 219px;
+  width: 200px;
   height: 1px;
   background-color: #ff0000;
   z-index: 2;

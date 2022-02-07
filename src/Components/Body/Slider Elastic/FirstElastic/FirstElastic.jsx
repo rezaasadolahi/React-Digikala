@@ -32,7 +32,7 @@ function FirstElastic() {
     return (
         <>
             <section className='title-elastic-carousel'>
-                <h3>گوشی موبایل</h3>
+                <h3 className='mt-1'>گوشی موبایل</h3>
                 <p className='title-elastic-carousel-p'>بر اساس بازدید های شما</p>
             </section>
             <hr className='line-hr-One' />
