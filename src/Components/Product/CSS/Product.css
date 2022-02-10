@@ -12,12 +12,7 @@ body {
   background-color: #f5f5f5;
 }
 
-main {
-  width: 100%;
-  z-index: 1;
-}
-
-main h1 {
+h1 {
   text-align: center;
   position: relative;
   top: 50px;
@@ -28,9 +23,9 @@ main h1 {
   height: auto;
   background-color: #f5f5f5;
   display: flex;
-  position: absolute;
-  top: 8em;
-  left: 0;
+  flex-direction: row;
+  position: relative;
+  top: 3em;
 }
 
 /*********************************************************************************/
@@ -246,7 +241,6 @@ aside #FilterBetween2price button {
   line-height: 25px;
 }
 
-
 /* List pishnahad search mahsul */
 
 .pishnahadSearch {
@@ -296,8 +290,9 @@ aside #FilterBetween2price button {
   color: #a1a3a8;
 }
 
-
-
-
-
-
+#manage-product {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  background-color: #f5f5f5;
+}

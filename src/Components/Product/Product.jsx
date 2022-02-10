@@ -4,8 +4,11 @@ import { Link, useLocation } from 'react-router-dom'
 //* Icons
 import { BsFilterLeft } from "react-icons/bs"
 import { MdKeyboardArrowLeft } from "react-icons/md"
+import leftArrow from "./icons/left-arrow.svg"
+import rightArrow from "./icons/right-arrow.svg"
 //* CSS
 import './CSS/Product.css'
+import './CSS/Pagination.css'
 //* DATA
 import { dataCenter } from './DATA/DATA'
 //* Reducer
@@ -101,25 +104,80 @@ const Product = () => {
     }, 1)
 
 
-    //* Effect
-    useEffect(() => {
-        dispatch(WhichPage(location.pathname))
-        // vaqti search mikonim ke mahsuli ra peida konim khat zir ejra mishe
-        const newData = dataCenter.AllData.filter(item => item.phoneName.find(item => item.name.toLowerCase().includes(searchValue.toLowerCase())))
-        setGetData(newData)
-    }, [searchValue])
+
+    //* Pagination
+    const [currentPage, setCurrentPage] = useState(1)
+    const itemsPage = 32
+    const pageNumberLimit = 5
+    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5)
+    const [minPageNumberLimit, setMinPageNumberLimit] = useState(0)
+
+    const indexOfLastItem = currentPage * itemsPage
+    const indexOfFirstItem = indexOfLastItem - itemsPage
+    const currentItems = getData.slice(indexOfFirstItem, indexOfLastItem)
+
+    //* Pagination - data length
+    const pages = []
+    for (let i = 0; i <= Math.ceil(getData.length / itemsPage); i++) {
+        pages.push(i)
+    }
+
+
+    //* Pagination - Render box numbers
+    const handleClick = (e) => {
+        setCurrentPage(Number(e.target.id))
+    }
+
+    const renderPageNumbers = pages.map(number => {
+        if (number > minPageNumberLimit && number <= maxPageNumberLimit) {
+            return (
+                <li
+                    key={number}
+                    id={number}
+                    onClick={handleClick}
+                    className={currentPage === number ? 'active' : null}
+                >
+                    {number}
+                </li>
+            )
+        } else {
+            return null
+        }
+    })
+
+
+    //* Pagination - Prev and Next Button
+    const handlePrevbtn = () => {
+        setCurrentPage(currentPage - 1)
+        if ((currentPage - 1) % pageNumberLimit === 0) {
+            setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit)
+            setMinPageNumberLimit(minPageNumberLimit - pageNumberLimit)
+        }
+    }
+
+    const handleNextbtn = () => {
+        setCurrentPage(currentPage + 1)
+        if (currentPage >= maxPageNumberLimit) {
+            setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit)
+            setMinPageNumberLimit(minPageNumberLimit + pageNumberLimit)
+        }
+    }
+
+    //* Pagination - 3 dot box
+    let pageIncrementBtn = null
+    if (pages.length > maxPageNumberLimit) { pageIncrementBtn = <li onClick={handleNextbtn}> &hellip; </li> }
+
+    let pageDecrementBtn = null
+    if (minPageNumberLimit >= 1) { pageDecrementBtn = <li onClick={handlePrevbtn}> &hellip; </li> }
 
 
 
 
-
-
-
-
-    return (
-        <>
-            {searchValue !== '' ?
-                <main>
+    //* render Data to ul list 
+    const renderData = (data) => {
+        return (
+            searchValue !== '' ?
+                <section id='manage-product'>
                     <section className='manage-Tags_product'>
                         <section className='under-main'>
                             <p id='TedadKala'>{getData.length} کالا</p>
@@ -148,7 +206,7 @@ const Product = () => {
 
 
                             {
-                                getData.map(item => {
+                                data.map(item => {
                                     return (
                                         <Link
                                             to={`/ProductDetail/${item.id}`}
@@ -236,9 +294,57 @@ const Product = () => {
                             <hr width="280" className='mx-auto mt-4 mb-4' />
                         </aside>
                     </section>
-                </main >
+
+                    {searchValue !== '' ?
+                        <ul className="pageNumbers">
+                            <li>
+                                <button
+                                    onClick={handlePrevbtn}
+                                    disabled={currentPage === pages[pages.length - 1] ? true : false}
+                                >
+                                    <img src={rightArrow} alt="" />
+                                </button>
+                            </li>
+
+                            {pageDecrementBtn}
+                            {renderPageNumbers}
+                            {pageIncrementBtn}
+
+                            <li>
+                                <button
+                                    onClick={handleNextbtn}
+                                    disabled={currentPage === 1 ? true : false}
+                                >
+                                    <img src={leftArrow} alt="" />
+                                </button>
+                            </li>
+                        </ul>
+                        : null
+                    }
+
+                </section>
                 : null
-            }
+        )
+    }
+
+
+
+    //* Effect
+    useEffect(() => {
+        dispatch(WhichPage(location.pathname))
+        // vaqti search mikonim ke mahsuli ra peida konim khat zir ejra mishe
+        const newData = dataCenter.AllData.filter(item => item.phoneName.find(item => item.name.toLowerCase().includes(searchValue.toLowerCase())))
+        setGetData(newData)
+        //* Scroll to top page
+        window.scrollTo(0, 0)
+    }, [searchValue, currentPage])
+
+
+
+
+    return (
+        <>
+            {renderData(currentItems)}
         </>
     )
 }
