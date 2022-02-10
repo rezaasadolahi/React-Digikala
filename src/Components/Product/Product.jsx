@@ -147,7 +147,7 @@ const Product = () => {
 
 
     //* Pagination - Prev and Next Button
-    const handlePrevbtn = () => {
+    const handleNextbtn = () => {
         setCurrentPage(currentPage - 1)
         if ((currentPage - 1) % pageNumberLimit === 0) {
             setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit)
@@ -155,7 +155,7 @@ const Product = () => {
         }
     }
 
-    const handleNextbtn = () => {
+    const handlePrevbtn = () => {
         setCurrentPage(currentPage + 1)
         if (currentPage >= maxPageNumberLimit) {
             setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit)
@@ -299,10 +299,10 @@ const Product = () => {
                         <ul className="pageNumbers">
                             <li>
                                 <button
-                                    onClick={handlePrevbtn}
-                                    disabled={currentPage === pages[pages.length - 1] ? true : false}
+                                    onClick={handleNextbtn}
+                                    disabled={currentPage === 1 ? true : false}
                                 >
-                                    <img src={rightArrow} alt="" />
+                                    <img src={leftArrow} alt="" />
                                 </button>
                             </li>
 
@@ -312,10 +312,10 @@ const Product = () => {
 
                             <li>
                                 <button
-                                    onClick={handleNextbtn}
-                                    disabled={currentPage === 1 ? true : false}
+                                    onClick={handlePrevbtn}
+                                    disabled={currentPage === pages[pages.length - 1] ? true : false}
                                 >
-                                    <img src={leftArrow} alt="" />
+                                    <img src={rightArrow} alt="" />
                                 </button>
                             </li>
                         </ul>
